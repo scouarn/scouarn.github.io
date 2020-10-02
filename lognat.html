@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Intégration</title>
+
+    <style>
+      body{
+        font-family:"Lucida Console";
+      }
+      #param{
+        float: left;
+      }
+      canvas{
+        float: right;
+      }
+    </style>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"> </script>
+
+    <script type="text/javascript">
+
+      let p;
+      let n;
+      let x_max;
+      let y_max;
+      let x1;
+      let y1;
+
+      function setup() {
+        createCanvas(800, 600);
+        noLoop();
+        update(1,2,4,2);
+      }
+
+      function update(_p,_n,_xm,_ym) {
+
+        if (_p != 0) {
+          document.getElementById('p_slider').value=_p;
+          document.getElementById('p_text').value=_p;
+          p = _p;
+
+        }
+        if (_n != 0) {
+          document.getElementById('n_slider').value=_n;
+          document.getElementById('n_text').value=_n;
+          n = _n;
+        }
+        if (_xm != 0) {
+          document.getElementById('x_slider').value=_xm;
+          document.getElementById('x_text').value=_xm;
+          x_max = _xm;
+          x1 = (width-50) / _xm;
+        }
+        // else if (x_max < n*p && n*p < 20) {
+        //   x_max = n*p+1;
+        //   x1 = (width-50) / x_max;
+        //   document.getElementById('x_slider').value=x_max;
+        //   document.getElementById('x_text').value=x_max;
+        // }
+        if (_ym != 0) {
+          document.getElementById('y_slider').value=_ym;
+          document.getElementById('y_text').value=_ym;
+          y_max = _ym;
+          y1 = (height-50) / _ym;
+        }
+
+
+        redraw();
+
+      }
+
+      function dispAxis(){
+        stroke(255);
+        strokeWeight(2);
+        line(-50,0,width-50,0);
+        line(0,50,0,50-height);
+
+        fill(255);
+        textSize(20);
+        noStroke();
+        textAlign(RIGHT, TOP);
+        text('0', -10, 10);
+
+
+        for(let i = 1; i < x_max; i++) {
+
+          stroke(255);
+          line(i*x1,0,i*x1,-10);
+
+          noStroke();
+          textAlign(CENTER, TOP);
+          text(i, i*x1, 10);
+
+        }
+
+        for(let i = 1; i < y_max; i++) {
+
+          stroke(255);
+          line(0,-i*y1,10,-i*y1);
+
+          noStroke();
+          textAlign(RIGHT, CENTER);
+          text(i, -10, -i*y1);
+        }
+
+        {
+          y = -log(n)*y1;
+
+          stroke(255);
+          line(0,y,10,y);
+
+          noStroke();
+          textAlign(RIGHT, CENTER);
+          text("ln"+n, -10, y);
+        }
+      }
+
+      function dispCurve(func) {
+
+        stroke(255);
+        strokeWeight(2);
+        beginShape();
+        noFill();
+
+        for (let x = 0; x < width; x+=1) {
+          vertex(x, -func(x/x1)*y1);
+        }
+        endShape();
+
+      }
+
+      function dispRects(func) {
+        noStroke();
+        fill(200,200,0);
+
+        let area = 0;
+        let w = (n-1)/p;
+
+        for (let i = 1; i <= p; i++) {
+          let x = w*(i-1) +1;
+          let y = func(x);
+
+          rect(x*x1,0,w*x1,-y*y1);
+
+          area += w*y;
+        }
+
+        strokeWeight(5);
+        stroke(255,255,0);
+        line(20,0,20,-area*y1);
+
+      }
+
+      function dispBars(func) {
+
+        strokeWeight(5);
+
+        let area = 0;
+
+        for (let i = p; i <= n*p; i++) {
+          let y = func(i);
+
+          stroke(255*(i%2),0,255*((i-1)%2));
+          line(i*x1, 0, i*x1, -y*y1);
+          line(10,-area*y1,10,-(area+=y)*y1)
+
+        }
+      }
+
+      function draw() {
+        background(0);
+        translate(50,height-50);
+
+        let func = x=>1.0/x;
+
+        if(document.getElementById("rects_check").checked)
+          dispRects(func);
+
+        if(document.getElementById("barres_check").checked)
+          dispBars(func);
+
+        dispAxis();
+        dispCurve(func);
+      }
+
+    </script>
+
+  </head>
+
+
+  <body>
+
+    <div id="param">
+      <p>
+        Valeur de p &nbsp&nbsp&nbsp
+        <input type="range" min="1" max="50" value="1" id="p_slider" oninput="update(this.value,0,0,0);">
+        <input type="text" value="1" id="p_text" oninput="update(this.value,0,0,0);">
+      </p>
+
+      <p>
+        Valeur de n &nbsp&nbsp&nbsp
+        <input type="range" min="1" max="10" value="2" id="n_slider" oninput="update(0,this.value,0,0);">
+        <input type="text" value="1" id="n_text" oninput="update(0,this.value,0,0);">
+      </p>
+
+      <p>
+        Valeur de x_max
+        <input type="range" min="2" max="20" value="3" id="x_slider" oninput="update(0,0,this.value,0);">
+        <input type="text" value="3" id="x_text" oninput="update(0,0,this.value,0);">
+      </p>
+
+      <p>
+        Valeur de y_max
+        <input type="range" min="1" max="10" value="2" id="y_slider" oninput="update(0,0,0,this.value);">
+        <input type="text" value="2" id="y_text" oninput="update(0,0,0,this.value);">
+      </p>
+
+      <p>
+        Afficher les barres
+        <input type="checkbox" id="barres_check" checked oninput="update(0,0,0,0);">
+      </p>
+
+      <p>
+        Afficher les rectangles
+        <input type="checkbox" id="rects_check" oninput="update(0,0,0,0);">
+      </p>
+      <br>
+      <p>
+        En info on a trouvé ça :
+        $$\forall n \in \mathbb N ^*, \quad \lim_{p\to \infty}\sum_{k=p}^{np} \frac{1}{k} = \ln(n)$$
+      </p>
+
+
+      <p>
+        Calcul de l'air sous la courbe avec des rectangles :
+        $$\forall n \in \mathbb R_+^*, \quad \int_{1}^{n} \frac{1}{p} dp = \lim_{p\to \infty}\sum_{k=1}^{p} \frac{n}{p}\times\frac{1}{k} = \ln(n)$$
+      </p>
+
+      <p>
+        Comment peut-on passer de la première à la deuxième expression ?
+      </p>
+
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>emulV2</title>
+    <script src="/scripts/emulV2/asmV2.js"></script>
+    <script src="/scripts/emulV2/emulV2.js"></script>
+    <script src="/scripts/emulV2/printer.js"></script>
+    <script src="/scripts/emulV2/screen.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
+
+    <style media="screen">
+
+      body {
+        margin:0;
+      }
+
+      #asm {
+        display:flex;
+        justify-content: space-between;
+        width:90%;
+        margin:auto;
+      }
+      #emul {
+        display:block;
+        margin:auto;
+      }
+      #buttons {
+
+        text-align: center;
+      }
+
+      .io  {
+        display:inline-block;
+        font-family: "Courier";
+        font-size: 1em;
+        background-color: white;
+        overflow-wrap:break-word;
+        flex: auto;
+        height:350px;
+        padding:2px;
+
+        margin-bottom: 3px;
+        resize:none;
+
+        border:1px solid rgb(169,169,169);
+      }
+
+      .p5Canvas {
+        display:block;
+        margin:auto;
+      }
+
+
+    </style>
+
+  </head>
+
+
+  <body>
+
+
+    <div id="asm">
+
+      <textarea spellcheck="false" id="input" class="io" onkeyup="sessionStorage.setItem('program-input', this.value);" placeholder="input" ></textarea>
+      <textarea spellcheck="false" id="output" class="io" readonly placeholder="asm output"></textarea>
+      <script>document.getElementById("input").value  = sessionStorage.getItem('program-input');</script>
+
+
+
+    </div>
+
+    <div id="buttons">
+      <button onclick="assemble();">Compile</button>
+      <button onclick="mac.load(currentOutput,currentBeginAdr);document.getElementById('output').value+='\nsuccesfully loaded !';">Load</button>
+      <button onclick="mac.start();">Start</button>
+      <button onclick="mac.stop();init();background(0);">Reset</button>
+
+      <button onclick="mac.requestInterrupt(0x9000);">Test Interrupt</button>
+      <a href="/scripts/emulV2/asmV2.js" target="_blank">[Code assembleur]</a>
+      <a href="/scripts/emulV2/emulV2.js" target="_blank">[Code émulateur]</a>
+    </div>
+
+    <br>
+
+    <textarea spellcheck="false" id="printer-output" readonly style="display:block;width:90%;margin:auto;" class="io"  placeholder="printer output"></textarea>
+    <br>
+
+    <script>
+      init();
+    </script>
+
+  </body>
+
+
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 200" style="enable-background:new 0 0 800 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:none;}
+	.st2{font-family:'Courier';}
+	.st3{font-size:21px;}
+	.st4{font-size:24px;}
+	.st5{font-size:36px;}
+	.st6{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st7{font-size:18px;}
+</style>
+<g>
+	<rect x="24.5" y="59.95" class="st0" width="750" height="80.11"/>
+	<line class="st0" x1="699.5" y1="59.95" x2="699.5" y2="140.05"/>
+	<line class="st0" x1="624.5" y1="59.95" x2="624.5" y2="140.05"/>
+	<line class="st0" x1="549.5" y1="59.95" x2="549.5" y2="140.05"/>
+	<line class="st0" x1="474.5" y1="59.95" x2="474.5" y2="140.05"/>
+	<line class="st0" x1="399.5" y1="59.95" x2="399.5" y2="140.05"/>
+	<line class="st0" x1="324.5" y1="59.95" x2="324.5" y2="140.05"/>
+	<line class="st0" x1="249.5" y1="59.95" x2="249.5" y2="140.05"/>
+	<line class="st0" x1="174.5" y1="59.95" x2="174.5" y2="140.05"/>
+	<line class="st0" x1="99.5" y1="59.95" x2="99.5" y2="140.05"/>
+</g>
+<g>
+	<g>
+		<line class="st0" x1="24.5" y1="168.5" x2="768.46" y2="168.5"/>
+		<g>
+			<path d="M774.5,168.5c-2.84,1.05-6.36,2.85-8.55,4.76l1.72-4.76l-1.72-4.75C768.14,165.65,771.66,167.45,774.5,168.5z"/>
+		</g>
+	</g>
+</g>
+<rect x="35.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 42.9551 99.0806)" class="st2 st3">...</text>
+<rect x="110.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 115.2549 100.9194)" class="st2 st4">...</text>
+<rect x="185.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 190.2549 108.2754)" class="st2 st5">PC</text>
+<rect x="260.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 265.2549 108.2754)" class="st2 st5">PC</text>
+<rect x="335.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 351.0566 108.2754)" class="st2 st5">A</text>
+<rect x="410.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 415.2549 108.2754)" class="st2 st5">JH</text>
+<rect x="485.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 490.2549 108.2754)" class="st2 st5">MH</text>
+<rect x="560.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 565.2549 108.2754)" class="st2 st5">FL</text>
+<rect x="635.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 640.2549 100.9194)" class="st2 st4">...</text>
+<rect x="710.72" y="86.21" class="st1" width="52.28" height="23.79"/>
+<text transform="matrix(1 0 0 1 715.2549 100.9194)" class="st2 st4">...</text>
+<g>
+	<g>
+		<line class="st6" x1="662" y1="42.93" x2="662" y2="11"/>
+		<g>
+			<path d="M662,55c2.11-5.68,5.7-12.73,9.51-17.09L662,41.35l-9.51-3.44C656.3,42.27,659.89,49.32,662,55z"/>
+		</g>
+	</g>
+</g>
+<rect x="185.08" y="121.08" class="st1" width="53.92" height="11.92"/>
+<text transform="matrix(1 0 0 1 195.835 132.1094)" class="st2 st7">low</text>
+<rect x="260.08" y="121.08" class="st1" width="53.92" height="11.92"/>
+<text transform="matrix(1 0 0 1 265.4346 132.1094)" class="st2 st7">high</text>
+<rect x="559.08" y="24.08" class="st1" width="91.92" height="16.92"/>
+<text transform="matrix(1 0 0 1 561.8306 35.1104)" class="st2 st7">pointeur</text>
+<rect x="665.08" y="174.08" class="st1" width="91.92" height="16.92"/>
+<text transform="matrix(1 0 0 1 667.8306 185.1104)" class="st2 st7">adresses</text>
+</svg>

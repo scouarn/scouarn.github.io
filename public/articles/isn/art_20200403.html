@@ -1,0 +1,33 @@
+<h1>Registres et mémoires simples<span class="date">03/04/2020</span></h1>
+
+<p>
+  Un registre est un composant qui peut stocker un mot de données en mémoire,
+  on va d'abord s'intéresser aux mémoires sur un seul bit que l'on appelle des flip-flop ou bascules.
+  La plus simple est la bascule RS (pour set/reset) qui utilise des portes NON-OU (NOR).
+  Lorsque l'on active l'entrée S la sortie Q se bloque alors à 1 et reste dans cet état
+  jusqu'à ce que l'on active la sortie R qui remet Q à 0.
+</p>
+
+<div class="container-center">
+  <img class="third" src="/img/sr_nor_latch.svg" alt="SR NOR LATCH">
+  <img class="third" src="/img/redstone_rs_nor_latch.png" alt="SR NOR LATCH">
+</div>
+
+<p>
+  Seulement ce n'est pas pratique pour faire des registres, il nous faudrait
+  un circuit avec une entrée avec un bit de donnée, une entrée pour enregistrer la donnée
+  et une sortie; ce que l'on appelle une bascule D.
+  Les circuits deviennent un peu compliqués mais dans Minecraft un bug (qui a intentionnellement été gardé dans le jeu)
+  rend cela très simple à réaliser.
+</p>
+
+<div class="container-center">
+  <img class="third" src="/img/redstone_d_latch_0.png" alt="SR NOR LATCH">
+  <img class="third" src="/img/redstone_d_latch_1.png" alt="SR NOR LATCH">
+</div>
+
+<p>
+  On peut alors aligner autant de ces modules que l'on veut pour construire un registre :
+</p>
+
+<img class="two-thirds center" src="/img/redstone_register_8bits.png" alt="register">

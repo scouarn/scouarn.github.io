@@ -1,0 +1,125 @@
+<h1>Un assembleur <span class="date">20/03/2020</span></h1>
+
+<p>
+Le langage assembleur est spécifique aux instructions de l'architecture du processeur.
+Pour convertir une instruction écrite en assembleur en lange machine il nous faut donc un compilateur spécial
+que l'on appelle également un "assembleur". Un assembleur peut aussi ajouter des fonctionnalités basiques comme la
+possibilité d'indiquer les erreurs ou de définir des constantes.
+Le compilateur peut donc comprendre des commandes en dehors des instructions définies dans l'article précédent.
+</p>
+
+<pre style="background:white; border:1px solid gray; font-size:1.2em; padding:5px; width:600px; display:block; margin:auto;">
+// pour commenter
+
+
+    ----------
+
+
+//pour déclarer une constante qui vaut ici 0xFF (255)
+_constante 0xFF
+
+//on peut l'utliser par exemple comme ceci :
+LDA #_constante
+
+//les constantes peuvent servir de pointeurs :
+LDA _constante
+
+
+    ----------
+
+
+//déclarer un label qui prend la valeur de
+//l'adresse de l'instruction qui suit (ici LDA)
+.boucle
+LDA #0xFF
+
+//les labels sont pratiques pour les sauts
+JMP #.boucle
+
+//on peut accéder au byte supérieur de l'adresse :
+// .boucle_
+
+
+    ----------
+
+
+//déclare l'adresse d'origine du programme
+//(uniquement à la première ligne)
+!0x0000
+
+
+    ----------
+/!\ EDIT: IL Y A UN BUG DANS CETTE VERSION DE L'ASSEMBLEUR,
+/!\ LES STRINGS ET LES ARRAYS NE FONCTIONNENT PAS.
+
+//string et array :
+:array [1,2,3,4,5]
+;string HELLO WORLD!
+
+//on peut alors accéder à d'autres variables :
+// .len pour la longueur
+// .end pour l'adresse de fin
+// _ pour le byte supérieur des adresses
+
+//on a donc :
+//array.len
+//array.end_
+//array_
+
+
+</pre>
+<p>
+On peut alors réécrire le programme pour la suite de fibonacci, l'assembleur donne bien le
+bon code machine en sortie. Le code fonctionne.
+</p>
+<pre style="background:white; border:1px solid gray; font-size:1.2em; padding:5px; width:600px; display:block; margin:auto;">
+//déclarations des adresses des variables (pointeurs)
+_A 0
+_B 1
+_C 2
+
+LMH #0xFF
+LDA #1
+STA #_A
+STA #_B
+
+//c = a + b
+.boucle
+LDA _A
+ADD* _B
+STA #_C
+
+//a = b
+LDA _B
+STA #_A
+
+//b = c
+LDA _C
+STA #_B
+
+//saut au label ".boucle"
+JNO #.boucle
+
+//halt : saut à 0xFFFF
+LJH #0xFF
+JMP #0xFF
+
+
+</pre>
+
+<p>
+Et voici donc l'assembleur écrit en JS, il prend un programme comme spécifié en entrée et
+donne en sortie la liste de nombres qui correspond au programme. Il donne également la liste
+des constantes qui ont été définies. Si il y a des erreurs, elles sont indiquées.
+On peut alors charger la liste de nombre dans la mémoire de l'émulateur.
+
+</p>
+
+<iframe style="border:none; display:block; margin:auto;" src="/pages/asmV1.html" width="90%" height="650"></iframe>
+
+
+<p>
+La prochaine étape pourrait être de programmer un compilateur similaire non pas en JS mais en assembleur.
+Le système serait alors plus "autonome". Une gestions des interfaces devrait aussi être mise en place,
+je pense utiliser les événements JS.
+</p>

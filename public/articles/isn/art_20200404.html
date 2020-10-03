@@ -1,0 +1,42 @@
+<h1>Additionneur binaire<span class="date">04/04/2020</span></h1>
+
+<p>
+  Le coeur de l'unité arithmétique et logique est un additionneur.
+  Il doit pouvoir prendre en entrée deux nombre binaire et donner leur somme en sortie.
+  L'addition en binaire fonctionne comme en décimal sauf qu'il faut mettre une retenue
+  lorsque l'on arrive à deux au lieu de dix.
+  On peut alors créer un circuit qui prend deux bits en entrée et donne leur somme ansi que la retenue en sortie.
+  La somme correspond à une porte XOR car on veut que la somme vaille 1 uniquement si un seul bit d'entrée vaut 1.
+  La retenue correspond à une porte ET car elle ne vaut 1 si les deux entrées valent 1 car 1 + 1 = 2.
+  On a alors ce circuit que l'on appelle un demi additionneur.
+</p>
+
+<img class="third center" src="/img/half_adder.svg" alt="half adder">
+
+<p>
+  On peut alors mettre deux de ces circuits en série pour gérer une troisième entrée pour la retenue.
+  On appelle ce nouveau circuit un additionneur complet, on peut relier la sortie retenue d'un à l'entrée
+  d'un autre pour construire un additionneur sur plusieurs bits,
+  la retenue est alors propagée d'un additionneur à l'autre.
+  Il existe cependant des circuits plus complexes qui anticipent à l'avance les retenues.
+</p>
+<div class="container-center">
+  <img class="half middle" src="/img/full_adder.svg" alt="full adder">
+  <img class="half middle" src="https://upload.wikimedia.org/wikipedia/commons/5/5d/4-bit_ripple_carry_adder.svg" alt="full adder">
+</div>
+
+
+<p>
+  J'ai utilisé le design très rapide et compact d'<a href="https://www.youtube.com/watch?v=UFSAPe761QY">Ammorth</a>
+  pour mon additionneur 8bits.
+</p>
+
+<div class="container-center">
+  <img class="half middle" src="/img/redstone_full_adder_0.png" alt="full adder">
+  <img class="half middle" src="/img/redstone_full_adder_1.png" alt="full adder">
+</div>
+<br>
+<div class="container-center">
+  <img class="half middle" src="/img/redstone_adder_8bits_0.png" alt="full adder">
+  <img class="half middle" src="/img/redstone_adder_8bits_1.png" alt="full adder">
+</div>

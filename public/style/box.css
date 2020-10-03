@@ -1,0 +1,17 @@
+
+.box {
+  margin-bottom: 15px;
+  background-color: rgba(150,140,140,0.95);
+  border-radius: 10px 10px 3px 3px;
+
+}
+
+
+.box h1 {
+  font-size: 1.5em;
+  margin:0;
+  padding:10px;
+  background-color: rgb(230,220,210);
+  border-radius: 10px 10px 3px 3px;
+
+}

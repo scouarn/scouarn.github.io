@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>emulV1</title>
+    <script src="/scripts/emulV1.js"></script>
+    <style media="screen">
+      body {
+
+        margin:0;
+      }
+
+      #emul {
+        max-width:600px;
+        display:block;
+      }
+
+      #emul-output {
+        font-family: "Courier";
+        font-size: 1em;
+        background-color: white;
+        display:block;
+        width:550px;
+        height:250px;
+        padding:2px;
+        resize:none;
+        overflow-wrap:break-word;
+        border:1px solid rgb(169,169,169);
+        margin-bottom: 3px;
+      }
+
+      #buttons button {
+        margin:2px;
+      }
+    </style>
+
+  </head>
+
+
+  <body>
+
+
+    <div id="emul">
+
+      <textarea id="emul-output" readonly class="io" placeholder="emul output"></textarea>
+
+      <div id="buttons">
+        <button onclick="mac.start();">Start</button>
+        <button onclick="mac.stop();">Stop</button>
+        <button onclick="mac.step();">Step</button>
+        <button onclick="init(program);">Reset</button>
+        <a href="/scripts/emulV1.js" target="_blank">Code source</a>
+      </div>
+
+
+    </div>
+
+    <script>init(program);</script>
+
+
+  </body>
+
+
+</html>

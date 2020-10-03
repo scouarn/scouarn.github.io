@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+    <link rel='stylesheet' href='/style/p5frame-doc.css'/>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
+
+
+  </head>
+
+
+
+  <body>
+    <script id="canvas"></script>
+    <img id="exitButton" src="/img/exitButton.png" onclick="window.location.href='p5-idle-frame.html?'+script;">
+
+    <script>
+      let script = window.location.href.split("?")[1];
+      document.getElementById("canvas").setAttribute("src",script);
+    </script>
+
+
+  </body>
+</html>

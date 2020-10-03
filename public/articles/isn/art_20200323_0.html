@@ -1,0 +1,115 @@
+<h1>Imprimante et écran<span class="date">23/03/2020</span></h1>
+
+<p>
+Les premiers ordinateurs n'avaient pas d'écrans, pour afficher des données en sortie ils pouvaient utiliser
+des cartes perforées, des lampes ou bien des formes primitives d'imprimantes qui ne pouvaient afficher que des caractères.
+Pour émuler une imprimante je peux réutiliser la fenêtre de debug de l'émulateur en la reliant aux ports I/O du processeur.
+Je vais utiliser un port qui servira à donner le caractère à imprimer et un autre si c'est un nombre que l'on veut imprimer,
+le périphérique peut détecter lorsque le processeur écrit sur ce port et afficher le caractère.
+Les caractères seront encodés en ASCII.
+</p>
+
+<p>
+Bien que l'ajout d'un écran rendrait l'imprimante obsolète, elle reste très efficace pour afficher du texte.
+Pour stocker ce qui doit être afficher une forme de mémoire est nécessaire, une partie de la mémoire sera donc
+dédiée à l'affichage vidéo (VRAM). Le système d'affichage (la "carte graphique") a alors un accès direct à la VRAM.
+La VRAM peut être aussi séparée de la mémoire principale.
+J'ai décidé d'allouer 4096 octets (4kio, 2^12) de VRAM, ce qui représente 1/16 du total de la mémoire qui est pour rappel de 64kio.
+</p>
+
+<p>
+On a alors de nombreux moyens de formater une image, je vais uniquement utiliser des formats matriciels (grille de pixels) :
+</p>
+
+<table class="half" style="text-align:center;"">
+  <tr>
+    <th>Définition</th>
+    <th>Nombre de couleurs</th>
+  </tr>
+  <tr>
+    <td>64x64</td>
+    <td>256</td>
+  </tr>
+  <tr>
+    <td>128x64</td>
+    <td>16</td>
+  </tr>
+  <tr>
+    <td>128x128</td>
+    <td>4</td>
+  </tr>
+
+  <tr>
+    <td>256x128</td>
+    <td>2</td>
+  </tr>
+
+
+</table>
+
+<p>
+  Un port I/O sera utilisé pour envoyer des commandes de base au contrôleur de l'écran : rafraichissement automatique ON/OFF,
+  rafraichir et effacer la mémoire. On peut aussi donner le mode de formatage et la palette de couleurs utilisée.
+  Lorsque le mode texte est activé les bits de palette et de définition sont ignorés. La définition est alors de 64x64 caractères
+  et le contenu de la VRAM est lu en tant que caractères ASCII. Les palettes et la police de caractères sont stockées dans le
+  contrôleur vidéo et ne peuvent pas être modifiées.
+</p>
+
+<table class="three-fourths" style="text-align:center;table-layout: fixed;">
+  <tr>
+    <td>Mode texte</td>
+    <td colspan="3">Palette</td>
+    <td colspan="2">Définition</td>
+    <td colspan="2">Commande</td>
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+</table>
+
+<br>
+
+<table class="three-fourths" style="text-align:center;table-layout: fixed;">
+  <tr>
+    <th colspan="2">Commandes</th>
+    <th colspan="2">Définitions</th>
+  </tr>
+  <tr>
+    <td>00</td>
+    <td>Rafraichir</td>
+    <td>00</td>
+    <td>64x64</td>
+  </tr>
+  <tr>
+    <td>01</td>
+    <td>Remplir en noir</td>
+    <td>01</td>
+    <td>128x64</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Rafraichissement auto on</td>
+    <td>10</td>
+    <td>128x128</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>Rafraichissement auto off</td>
+    <td>11</td>
+    <td>256x128</td>
+  </tr>
+</table>
+
+
+
+<p>
+Reste plus qu'à produire une deuxième version de l'émulateur qui intègre un système I/O avec interruption, une imprimante et un écran.
+Pour le moment je ne vais pas utiliser les 3 bits de palette et rester en nuances de gris.
+</p>

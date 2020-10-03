@@ -1,0 +1,26 @@
+<h1>Simulation particules soumises à la gravité <span class="date">01/03/2020</span></h1>
+
+<p>
+  Depuis que j'ai vu <a href="https://www.youtube.com/watch?v=pQiKBM9rDoM">cette vidéo</a>,
+  ce genre de simulation est quelque chose que je refais souvent car je n'arrive jamais
+  à en créer une qui m'émerveillerait autant que celle de la vidéo.
+</p>
+
+<p>
+  En voici une en 3D avec 500 particules de même masse réparties aléatoirement dans
+  le cube de départ, la gravité ne s'applique plus lorsque la distance est supérieure
+  à 1/5 de la largeur du cube (mais utilise quand même la loi du carré inverse),
+  je pense que c'est cela qui permet la formations de "galaxies" en émulant de plus grandes
+  distances (dans la réalité les galaxies sont très éloignées les unes des autres).
+  C'est tout de même intéressant de voir ces amas se former puis rentrer en collision.
+</p>
+<p>
+  J'ai essayé d'accélérer le calcule la physique en traitant chaque particule en
+  parallèle en utilisant la carte graphique et des matrices mais c'était finalement
+  plus lent. En même temps si je cherche des performances il y a des langages plus adaptés...
+
+</p>
+<p>
+  La caméra se contrôle avec la souris.
+</p>
+<iframe class="p5frame" src="/pages/p5-idle-frame.html?/scripts/universim.js"></iframe>

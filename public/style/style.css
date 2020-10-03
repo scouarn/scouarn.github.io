@@ -1,0 +1,22 @@
+@import "box.css";
+@import "feed.css";
+@import "p5frame.css";
+
+body {
+  background-image: url("/img/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+
+  font-family: Arial, sans-serif;
+
+  width: 90%;
+  margin: auto;
+
+}
+
+#main_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

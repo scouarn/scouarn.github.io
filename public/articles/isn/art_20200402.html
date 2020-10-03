@@ -1,0 +1,57 @@
+<h1>Bus et multiplexeurs<span class="date">02/04/2020</span></h1>
+
+<p>
+  Pour le transport des données d'un endroit à l'autre du processeur on utilise des bus.
+  Concrètements ce sont des "autoroutes" avec un certain nombre de fils qui correspondent chacun à
+  un bit du nombre que l'on veut transporter.
+  En pratique ce sont des conducteurs électriques ce qui implique qu'un bus peut être bidirectionnel,
+  ce qui est le cas dans de nombreuses architectures.
+  Seulement dans Minecraft les répéteurs ne laissent passer le signal que dans un sens,
+  heureusement notre architecture ne possède pas de bus bidirectionnel.
+  Un exemple de bus 8 bits :
+</p>
+
+<img class="center three-fourths" src="/img/redstone_bus.png">
+
+
+<p>
+  Comme certains bus seront reliés à la sortie de plusieurs registres il faut un moyen de ne prendre que le
+  signal d'un seul registre pour le mettre dans le bus.
+  On peut par exemple faire le circuit suivant qui est un multiplexeur qui prend deux signaux en entrée
+  et en donne un en sortie suivant le signal de contrôle :
+  lorsque S vaut 1, Z prend la valeur de A mais si S vaut 0 alors Z prend la valeur de B.
+</p>
+
+
+<img class="half center" src="/img/multiplexer_1bit.svg" alt="multiplexeur">
+
+<p>
+  En redstone on a S en bleu, Z en jaune, A en rouge et B en vert.
+
+</p>
+
+<div class="container-center">
+  <img class="half" src="/img/redstone_multiplexer_1bit_0.png" alt="multiplexeur">
+  <img class="half" src="/img/redstone_multiplexer_1bit_1.png" alt="multiplexeur">
+</div>
+
+<p>
+  On peut alors généraliser avec autant de signaux que l'on veut en activant le bon signal de contrôle.
+  On peut aussi généraliser avec des signaux de autant de bits que l'on veut en ajoutant des portes ET.
+  Les portes OU ne sont pas représentées.
+</p>
+
+<div class="container-center">
+  <img class="half middle" src="/img/multiplexer_4bits.svg" alt="multiplexeur">
+  <img class="half middle" src="/img/multiplexer_3x3bits.svg" alt="multiplexeur">
+</div>
+
+<p>
+  En jaune Z, en rouge A, en vert B et en bleu C.
+  On remarque que cela revient à désactiver la sortie des registres sauf quand le signal de contrôle
+  est activé.
+</p>
+<div class="container-center">
+<img class="half" src="/img/redstone_multiplexer_3x3bits_1.png" alt="multiplexeur">
+  <img class="half" src="/img/redstone_multiplexer_3x3bits_0.png" alt="multiplexeur">
+</div>

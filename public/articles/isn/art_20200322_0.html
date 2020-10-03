@@ -1,0 +1,55 @@
+<h1>Entrée-sorties (I/O)<span class="date">22/03/2020</span></h1>
+<p>
+Pour communiquer avec le processeur il faut un système d'interfaces.
+L'émulateur est capable de charger un programme dans la mémoire,
+ce qui reviendrait à changer physiquement des morceaux de la RAM
+comme lorsque l'on insérait une cartouche dans un ancien ordinateur.
+Il montre aussi en sortie les instructions exécutées pour du debug.
+Ce n'est pas ce genre de "communication" il est question.
+</p>
+
+<p>
+Prenons l'exemple d'une manette de jeu qui possède 8 boutons (par exemple celle de la NES).
+Chaque boutons ne peut être que dans deux états, relâché ou enfoncé.
+On peut alors représenter l'état de toute la manette avec un octet :
+</p>
+
+<table class="three-fourths" style="text-align:center;table-layout: fixed;">
+  <tr>
+    <td>Droite</td>
+    <td>Gauche</td>
+    <td>Bas</td>
+    <td>Haut</td>
+    <td>Start</td>
+    <td>Select</td>
+    <td>B</td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+    <td>X</td>
+  </tr>
+</table>
+
+<p>
+  On peut ensuite allouer une adresse spéciale qui ne serait pas raccordée à la mémoire mais à la manette.
+  Pour connaître quels boutons sont enfoncés, le processeur n'a qu'à lire la valeur à cette adresse.
+  La communication peut se faire dans l'autre sens si l'on imagine par exemple qu'un autre octet contrôle
+  des LEDs sur la manette, le processeur pourrait modifier leur état en écrivant à la bonne adresse.
+  Ces adresses spéciales sont ce qu'on appelle des ports I/O.
+</p>
+
+<img src="/img/io.svg" alt="I/O" class="center three-fourths">
+
+<p>
+Il peut être intéressant de mettre un flag "prêt" sur les ports pour empêcher le processeur de lire ou d'écrire sur
+un ports qui n'est "prêt". Par exemple si le processeur veut lire le contenu d'un CD mais que le lecteur
+n'a pas encore trouvé la valeur recherchée sur le disque, il est préférable que le lecteur indique que le port n'est pas prêt
+pour indiquer au processeur d'attendre jusqu'à ce que la bonne valeur soit dans le port.
+</p>

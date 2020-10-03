@@ -1,0 +1,34 @@
+<h1>L'UAL, l'accumulateur et les flags<span class="date">05/04/2020</span></h1>
+
+<p>
+  On a déjà une UAL capable d'une seule opération : l'addition.
+  On peut également récupérer une sortie AND et XOR dans les circuits d'addition.
+  Un bus au dessus de tout le circuit récupère les signaux de sortie lorsqu'ils sont activés.
+  On peut alors avoir une fonction OR en activant AND et XOR en même temps.
+
+</p>
+<p>
+  L'entrée du bas est allouée uniquement à l'accumulateur, un système reliant les deux entrées sur commande
+  en désactivant l'accumulateur permet un décalage gauche sur la sortie addition car c'est équavalent à une multiplication par 2.
+  Un circuit sur l'autre entrée sort chaque bit mais décalé sur le fil à sa droite pour la fonction décalage droite.
+</p>
+<p>
+  Pour la soustraction on va prendre l'opposé de l'entrée principale ce qui correspond à inverser tous ses bits et à ajouter 1.
+  On utilise donc une porte XOR comme une porte NOT avec condition et on active l'entrée retenue de l'additionneur.
+  On peut alors désactiver l'entrée accumulateur, inverser l'entrée et activer la sortie addition pour avoir la fonction NOT.
+</p>
+
+<img class="center four-fifths" src="/img/redstone_ual_0.png" alt="UAL">
+
+<p>
+  L'accumulateur est collé au plus près de l'UAL, relié par les bus roses.
+  J'ai ensuite ajouté le registre des flags et est relié à l'accumulateur et à l'UAL de manière à générer les bons flags.
+  Le bus d'entrée de l'UAL est en blanc et passe au dessus, il est aussi relié à l'entrée du registre des flags.
+  Le bus de sortie de la partie UAL est aussi en blanc et est en dessous, relié au registre des flags et à l'accumulateur.
+  En orange il y aura le bus de 4 bits qui transporte les flags jusqu'à l'unité de contrôle.
+</p>
+
+<div class="container-center">
+  <img class="half" src="/img/redstone_flreg_0.png">
+  <img class="half" src="/img/redstone_flreg_1.png">
+</div>

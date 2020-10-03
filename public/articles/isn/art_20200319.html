@@ -1,0 +1,67 @@
+<h1>Premier prototype d'émulateur <span class="date">19/03/2020</span></h1>
+
+<p>
+Voici la première version de l'émulateur, l'intégralité des instructions prévues y sont présentes.
+Je ne savais pas trop sous quelle forme le présenter, à chaque fois qu'une instruction est exécutée
+l'opcode est affiché ansi que l'argument et entre parenthèse la valeur à l'adresse de l'argument lorsque
+l'adressage n'est pas immédiat. La fréquence est de 10 instructions par seconde, c'est arbitraire on peut
+l'augmenter si besoin.
+</p>
+
+<iframe style="border:none; display:block; margin:auto;" src="/pages/emulV1.html" width="600" height="300"></iframe>
+
+<p>
+L'émulateur exécute un algorithme qui calcule les termes de la suite de fibonacci, il s'arrête lorsqu'il y a
+overflow (lorsque qu'un terme dépasse 255). Le système est alors stoppé, comme je n'ai pas d'instruction spécifique
+pour l'arrêter j'ai décidé arbitrairement que la procédure serait de sauter à l'adresse 0xFFFF (la dernière de la mémoire).
+Il est certainement possible d'écrire un algorithme plus performant au vu des spécificités de l'architecture.
+</p>
+
+<pre style="background:white; border:1px solid gray; padding:5px; width:400px; display:block; margin:auto;">
+
+  let program = [
+
+    //init : je définie les variables,
+    //a = 1 à l'adresse 0xFF00
+    //b = 1 à l'adresse 0xFF01
+    112,0xFF, //LMH (imm)
+    64,1,     //LDA (imm)
+    128,0,    //STA (imm)
+    128,1,    //STA (imm)
+
+    //c = a + b : je place c à l'adresse 0xFF02
+    65,0,     //LDA
+    3,1,      //ADD
+    128,2,    //STA (imm)
+
+    //a = b
+    65,1,     //LDA
+    128,0,    //STA (imm)
+
+    //b = c
+    65,2,     //LDA
+    128,1,    //STA (imm)
+
+    //loop : saute à 8 (c = a + b)
+    216,8,    //JNO (imm)
+
+    //halt : saute à 0xFFFF
+    120,0xFF, //LJH (imm)
+    192,0xFF  //JMP (imm)
+
+  ];
+
+  //abrégé en :
+  //[112,0xFF,64,1,128,0,128,1,65,
+  //0,3,1,128,2,65,1,128,0,65,2,
+  //128,1,216,8,120,0xFF,192,0xFF];
+
+
+</pre>
+
+
+
+<p>
+Tous ces codes sont pour l'instant assez mystérieux, je vais détailler la structure des instructions
+et de l'architecture. Tout cela devrait alors faire sens.
+</p>

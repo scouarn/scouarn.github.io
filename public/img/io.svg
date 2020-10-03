@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 590 350" style="enable-background:new 0 0 590 350;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:none;stroke:#000000;stroke-width:5;stroke-miterlimit:10;}
+	.st2{fill:none;}
+	.st3{font-family:'Courier';font-weight:bold;}
+	.st4{font-size:21px;}
+</style>
+<g>
+	<rect x="22.5" y="114" class="st0" width="195" height="95"/>
+	<path d="M215,116.5v90H25v-90H215 M220,111.5H20v100h200V111.5L220,111.5z"/>
+</g>
+<g>
+	<rect x="22.5" y="232.5" class="st0" width="195" height="95"/>
+	<path d="M215,235v90H25v-90H215 M220,230H20v100h200V230L220,230z"/>
+</g>
+<g>
+	<rect x="422.5" y="22.5" class="st0" width="145" height="305"/>
+	<path d="M565,25v300H425V25H565 M570,20H420v310h150V20L570,20z"/>
+</g>
+<g>
+	<g>
+		<line class="st1" x1="220" y1="161.5" x2="414.29" y2="161.5"/>
+		<g>
+			<polygon points="404.33,169.98 412.81,161.5 404.33,153.02 411.52,153.02 420,161.5 411.52,169.98 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st1" x1="220" y1="136" x2="414.29" y2="136"/>
+		<g>
+			<polygon points="404.33,144.48 412.81,136 404.33,127.52 411.52,127.52 420,136 411.52,144.48 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st1" x1="225.71" y1="188.5" x2="420" y2="188.5"/>
+		<g>
+			<polygon points="235.67,196.98 227.19,188.5 235.67,180.02 228.48,180.02 220,188.5 228.48,196.98 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st1" x1="220" y1="266.5" x2="446.78" y2="266.5"/>
+		<g>
+			<polygon points="436.82,274.98 445.3,266.5 436.82,258.02 444.02,258.02 452.5,266.5 444.02,274.98 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line class="st1" x1="225.71" y1="293.5" x2="452.5" y2="293.5"/>
+		<g>
+			<polygon points="235.67,301.98 227.19,293.5 235.67,285.02 228.48,285.02 220,293.5 228.48,301.98 			"/>
+		</g>
+	</g>
+</g>
+<rect x="29.43" y="268.45" class="st2" width="181.13" height="23.09"/>
+<text transform="matrix(1 0 0 1 38.0868 281.7456)" class="st3 st4">PÉRIPHÉRIQUES</text>
+<rect x="29.43" y="154.95" class="st2" width="181.13" height="23.09"/>
+<text transform="matrix(1 0 0 1 56.9896 168.2456)" class="st3 st4">PROCESSEUR</text>
+<rect x="404.43" y="120.01" class="st2" width="181.13" height="23.09"/>
+<text transform="matrix(1 0 0 1 450.8925 133.3022)" class="st3 st4">MÉMOIRE</text>
+<rect x="404.43" y="249.91" class="st2" width="181.13" height="41.84"/>
+<text transform="matrix(1 0 0 1 463.4949 263.1984)"><tspan x="0" y="0" class="st3 st4">PORTS </tspan><tspan x="12.6" y="25.2" class="st3 st4">I/O</tspan></text>
+<rect x="455" y="230.83" class="st1" width="80" height="80"/>
+</svg>

@@ -1,0 +1,40 @@
+body {
+  width:600px;
+  height:600px;
+  background-color:black;
+  margin:0;
+  overflow: hidden;
+  font-family: Courier, sans-serif;
+  color:white;
+
+}
+
+#titre {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+#source {
+  position:absolute;
+  font-size:1.5em;
+  color: #0000FF;
+  right:5px;
+  bottom:5px;
+}
+
+img {
+  position:absolute;
+}
+
+img:hover {
+  cursor:pointer;
+}
+
+#playButton {
+  left:225px;
+  top:225px;
+}
+
+#exitButton {
+  right:0;
+}

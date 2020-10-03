@@ -1,0 +1,113 @@
+<h1>L'architecture <span class="date">20/03/2020</span></h1>
+
+<p>
+J'ai refait mon schéma au propre, ça m'a permis d'en apprendre un peu sur les graphismes vectoriels
+et l'utilisation des fichiers SVG. Ça a ses avantages et ses inconvénients. Les lignes noires
+représentents les bus de données et les lignes oranges les bus d'adresses.
+Je n'a pas représenté les signaux qui sortent de l'unité de contrôle (UC) qui seraient rattachés à tous
+les autres composants.
+</p>
+<img src="/img/architecture.svg" class="center four-fifths" alt="architecture">
+
+
+<p>
+Description des composants du processeur :
+</p>
+
+<table style="min-width:600px;width:80%;">
+
+  <tr>
+    <th>UAL</th>
+    <td>8 bits</td>
+    <td>unité arithmétique et logique</td>
+    <td>effectue des opérations sur des nombres binaires</td>
+  </tr>
+  <tr>
+    <th>A</th>
+    <td rowspan="2">8 bits</td>
+    <td rowspan="2">accumulateur</td>
+    <td rowspan="2">stocke le résultat de l'UAL</td>
+  </tr>
+  <tr>
+    <th>B</th>
+  </tr>
+  <tr>
+    <th>MEM</th>
+    <td>64k</td>
+    <td>mémoire</td>
+    <td>entrée 16 bits pour l'adresse et interface 8 bits pour écrire et lire des données</td>
+  </tr>
+  <tr>
+    <th>FL</th>
+    <td>8bits</td>
+    <td>registre des flags ("drapeaux")</td>
+    <td>indique les caractéristiques du résultat d'une opération effectuée par l'UAL</td>
+  </tr>
+  <tr>
+    <th>OP</th>
+    <td>16bits</td>
+    <td>registre d'instruction</td>
+    <td>contient l'instruction actuellement exécutée</td>
+  </tr>
+  <tr>
+    <th>UC</th>
+    <td colspan="3">unité de contrôle : décode le registre OP et contrôle chaque composant du processeur pour exécuter l'instruction</td>
+  </tr>
+  <tr>
+    <th>PC</th>
+    <td>16bits</td>
+    <td>compteur ordinal</td>
+    <td>contient l'adresse de l'instruction actuellement exécutée</td>
+  </tr>
+  <tr>
+    <th>JH</th>
+    <td>8bits</td>
+    <td>registre supérieur de saut</td>
+    <td>l'octet supérieur de l'adresse de saut</td>
+  </tr>
+  <tr>
+    <th>MH</th>
+    <td>8bits</td>
+    <td>registre supérieur de mémoire</td>
+    <td>l'octet supérieur d'une adresse mémoire</td>
+  </tr>
+  <tr>
+  <tr>
+    <th>SP</th>
+    <td>16bits</td>
+    <td>pointeur stack ("pile")</td>
+    <td>donne l'adresse du sommet du stack</td>
+  </tr>
+  <tr>
+    <th>MUX</th>
+    <td colspan="2">multiplexeur</td>
+    <td>permet de choisir le signal de sortie parmi les signaux d'entrée</td>
+  </tr>
+</table>
+
+<p>
+Registre des flags. Il est utilisé lorsque l'on fait un saut conditionnel : par exemple si l'on ordonne
+de sauter uniquement si le flag "zéro" est mis l'unité de contrôle va regarder l'état de ce registre.
+Le flag "interruption" est un peu spécial puisqu'il indique si le processeur est "interruompu", je reviendrai
+sur cette notion avec les interfaces (I/O). Les 4 bits non utilisés pourraient éventuellement être tout
+de même utilisés par un programme, l'unité de contrôle ne devrait alors ne pas y toucher.
+</p>
+<table style="text-align:center;min-width:600px;width:80%;">
+  <tr>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th>X</th>
+    <th>I</th>
+    <th>Z</th>
+    <th>N</th>
+    <th>O</th>
+  </tr>
+  <tr>
+    <td colspan="4">Non utilisés</td>
+    <td>interruption</td>
+    <td>zéro</td>
+    <td>négatif</td>
+    <td>overflow</td>
+  </tr>
+</table>

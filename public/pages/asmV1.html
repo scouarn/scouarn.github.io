@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>emulV1</title>
+    <script src="/scripts/asmV1.js"></script>
+    <script src="/scripts/emulV1.js"></script>
+    <style media="screen">
+
+      body {
+        margin:0;
+      }
+
+      #asm {
+        display:flex;
+        justify-content: space-between;
+      }
+      #emul {
+        display:block;
+        margin:auto;
+      }
+
+      .io  {
+        display:inline-block;
+        font-family: "Courier";
+        font-size: 1em;
+        background-color: white;
+        overflow-wrap:break-word;
+
+        width:48%;
+        height:280px;
+        padding:2px;
+
+        margin-bottom: 3px;
+        resize:none;
+
+        border:1px solid rgb(169,169,169);
+      }
+
+
+    </style>
+
+  </head>
+
+
+  <body>
+
+
+    <div id="asm">
+
+      <textarea id="input" class="io" onkeyup="sessionStorage.setItem('program-input', this.value);" placeholder="input" ></textarea>
+      <textarea id="output" class="io" readonly placeholder="asm output"></textarea>
+      <script>document.getElementById("input").value  = sessionStorage.getItem('program-input');</script>
+
+
+
+    </div>
+
+    <div id="buttons">
+      <button onclick="assemble();">Compile</button>
+      <button onclick="mac.load(currentOutput,currentBeginAdr);document.getElementById('output').value+='\nsuccesfully loaded !'">Load to emul</button>
+      <a href="/scripts/asmV1.js" target="_blank">Code source</a>
+    </div>
+
+    <br>
+    <div id="emul">
+
+      <textarea id="emul-output" readonly class="io" placeholder="emul output"></textarea>
+
+          <div id="buttons">
+            <button onclick="mac.start();">Start</button>
+            <button onclick="mac.stop();">Stop</button>
+            <button onclick="mac.step();">Step</button>
+            <button onclick="init();">Reset</button>
+            <a href="/scripts/emulV1.js" target="_blank">Code source</a>
+          </div>
+
+    </div>
+
+
+
+    <script>init();</script>
+
+  </body>
+
+
+</html>

@@ -9,6 +9,7 @@
     <link rel="icon" href="/img/icon.jpg" />
     <title>Mon site</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/libs/getListing.js"></script>
     <script src="/libs/includeHTML.js"></script>
     <script src="/libs/feed.js"></script>
@@ -18,7 +19,16 @@
 
   <body>
 
-    <header includeHTML="/common/header.html"></header>
+    <header>
+      <link rel="stylesheet" href="/style/banner.css" />
+      <a href="/index.html">
+        <div id="banner">
+            <img src="/img/console.png" alt="banner"/>
+            <img src="/img/banner.png" alt="banner"/>
+            <img src="/img/scouarn_sg.png" alt="banner"/>
+        </div>
+      </a>
+    </header>
 
 
     <section id="main_content">

@@ -155,7 +155,7 @@
 
       }
 
-      function dispBars(func) {
+      function dispBarsOld(func) {
 
         strokeWeight(5);
 
@@ -167,6 +167,26 @@
           stroke(255*(i%2),0,255*((i-1)%2));
           line(i*x1, 0, i*x1, -y*y1);
           line(10,-area*y1,10,-(area+=y)*y1)
+
+        }
+      }
+
+      function dispBars(func) {
+
+        strokeWeight(5);
+
+        let area = 0;
+
+        for (let i = p; i <= n*p; i++) {
+          let y = func(i);
+
+          fill(255*(i%2),0,255*((i-1)%2));
+          noStroke();
+          rect(i*x1, 0, 1*x1, -y*y1);
+
+          stroke(255*(i%2),0,255*((i-1)%2));
+          line(10,-area*y1,10,-(area+=y)*y1)
+
 
         }
       }
@@ -246,8 +266,8 @@
       </p>
 
       <p>
-        On a aussi
-        $$\int_{p}^{np} \frac{dp}{p} = \ln n$$
+        Trouvé ! Par cacul d'aires on retrouve la formule de départ.
+        $$\int_{k}^{nk} \frac{dp}{p} = \lim_{p\to \infty}\sum_{k=p}^{np} 1 \times \frac 1k = \ln (n)$$
       </p>
 
     </div>

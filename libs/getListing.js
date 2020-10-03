@@ -2,7 +2,7 @@
 
 function getListing(dir) {
 
-  console.log("test");
+  console.log("HELLO");
   $.getJSON(dir, data => {
           console.log(data); //["doc1.jpg", "doc2.jpg", "doc3.jpg"]
       });

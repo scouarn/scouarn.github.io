@@ -25,7 +25,7 @@
 #menu a {
   color: black;
   text-decoration: none;
-  cursor: auto;
+  cursor: pointer;
 }
 #menu a:hover
 {

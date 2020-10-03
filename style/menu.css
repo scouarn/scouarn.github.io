@@ -30,4 +30,5 @@
 #menu a:hover
 {
   color: red;
+  cursor: pointer;
 }

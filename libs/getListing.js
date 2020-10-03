@@ -3,12 +3,12 @@
 function getListing(dir) {
 
   console.log("test");
-  $.getJSON('./somedir', data => {
+  $.getJSON(dir, data => {
           console.log(data); //["doc1.jpg", "doc2.jpg", "doc3.jpg"]
       });
 
 
   return [];
-  
+
 
 }

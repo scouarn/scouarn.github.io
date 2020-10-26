@@ -49,7 +49,7 @@
       </aside>
 
       <section id="article_feed">
-
+        <?php include "/articles/main/art_0.html" ?>
       </section>
 
 

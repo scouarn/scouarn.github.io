@@ -1,7 +1,7 @@
 
 function initMenu() {
 
-  let links = $("#menu").("li")
+  let links = $("#menu").find("li")
   console.log(links)
   console.log("test")
 

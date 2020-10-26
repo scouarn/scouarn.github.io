@@ -10,40 +10,14 @@
             "art_20200226_4.html"
         ]
     },
-    "dessin": {
-        "folder": "dessin",
-        "files": [
-            "art_0.html",
-            "art_20200226_00.html",
-            "art_20200226_01.html",
-            "art_20200226_02.html",
-            "art_20200226_03.html",
-            "art_20200226_04.html",
-            "art_20200226_05.html",
-            "art_20200226_06.html",
-            "art_20200226_07.html",
-            "art_20200226_08.html",
-            "art_20200226_09.html",
-            "art_20200226_10.html",
-            "art_20200226_11.html",
-            "art_20200226_12.html",
-            "art_20200226_13.html"
-        ]
-    },
     "fourmis": {
         "folder": "fourmis",
         "files": [
             "art_20200226.html"
         ]
     },
-    "main": {
-        "folder": "main",
-        "files": [
-            "art_0.html"
-        ]
-    },
-    "maths": {
-        "folder": "maths",
+    "isn": {
+        "folder": "isn",
         "files": [
             "art_20190900.html",
             "art_20190915.html",
@@ -78,6 +52,12 @@
             "art_20200411.html"
         ]
     },
+    "main": {
+        "folder": "main",
+        "files": [
+            "art_0.html"
+        ]
+    },
     "micro": {
         "folder": "micro",
         "files": [
@@ -88,10 +68,30 @@
             "art_4.html"
         ]
     },
-    "musique": {
-        "folder": "musique",
+    "music": {
+        "folder": "music",
         "files": [
             "art_20200225.html"
+        ]
+    },
+    "shadoks": {
+        "folder": "shadoks",
+        "files": [
+            "art_0.html",
+            "art_20200226_00.html",
+            "art_20200226_01.html",
+            "art_20200226_02.html",
+            "art_20200226_03.html",
+            "art_20200226_04.html",
+            "art_20200226_05.html",
+            "art_20200226_06.html",
+            "art_20200226_07.html",
+            "art_20200226_08.html",
+            "art_20200226_09.html",
+            "art_20200226_10.html",
+            "art_20200226_11.html",
+            "art_20200226_12.html",
+            "art_20200226_13.html"
         ]
     },
     "simu": {

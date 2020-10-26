@@ -1,8 +1,9 @@
 
 function initMenu() {
-  let menu = document.getElementById("menu");
+
   let links = $("#menu").("li")
   console.log(links)
+  console.log("test")
 
 }
 

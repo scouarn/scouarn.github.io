@@ -1,7 +1,9 @@
 {
-"main": [
-  "art_0.html"
-]
+"main": {
+  "folder" : "main"
+  "files" : ["art_0.html"]
+  }
+
 
 
 }

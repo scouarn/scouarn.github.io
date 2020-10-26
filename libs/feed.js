@@ -1,7 +1,7 @@
 
 function initMenu() {
   let menu = document.getElementById("menu");
-  let links = $("#menu").getElementsByTagName("li")
+  let links = $("#menu").("li")
   console.log(links)
 
 }

@@ -11,7 +11,8 @@
 
     <script src="/libs/feed.js"></script>
     <script src="/libs/menu.js"></script>
-
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    
   </head>
 
 

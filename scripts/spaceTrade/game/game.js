@@ -5,28 +5,12 @@ let playerShip;
 let gameState;
 let fpsBuffer = new Array(60);
 
+let centerVec;
 
 function setup() {
-  let cvs = createCanvas(window.innerWidth,window.innerHeight);
-  //cvs.position(0,0);
-
+  createCanvas(window.innerWidth,window.innerHeight);
   gameState = new State_mainMenu();
-
-  currentGalaxy = new Galaxy();
-
-  currentSystem = new DummySystem(0,currentGalaxy.coords[0]).promote();
-  let sun = new Planet(mass = 1000, radius = 1000, name = "Sun");
-  let earth = new Planet(mass = 250, radius = 250, name = "Earth");
-  let moon = new Planet(mass = 50, radius = 50, name="Moon");
-  currentSystem.appendPlanet(sun);
-  currentSystem.appendPlanet(earth, parent = sun,1000000);
-  currentSystem.appendPlanet(moon, parent = earth, 500);
-
-  playerShip = new Ship();
-  currentSystem.appendChild(playerShip);
-  playerShip.setOrbit(earth, 100);
-  playerShip.autopilot.setTarget(moon);
-
+  centerVec = createVector(width/2,height/2);
 
 }
 
@@ -36,12 +20,29 @@ function draw() {
 }
 
 
-function mouseClicked() {
-  gameState.mouseClicked();
+function mouseClicked(event) {
+  gameState.mouseClicked(event);
   gameState.testButtons();
 
 }
 
-function keyPressed() {
-  gameState.keyPressed();
+function keyPressed(event) {
+  gameState.keyPressed(event);
+}
+
+function mouseWheel(event) {
+  gameState.mouseWheel(event);
+}
+
+function showFPS() {
+
+  let avg = 0;
+  for (let i = 0; i < fpsBuffer.length; i++) avg += fpsBuffer[i];
+  avg /= fpsBuffer.length;
+
+  fill(255);
+  noStroke();
+  textSize(18);
+  textAlign(RIGHT,BOTTOM);
+  text("fps:"+avg.toFixed(1),width,height-35);
 }

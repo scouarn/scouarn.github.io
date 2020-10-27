@@ -10,6 +10,16 @@
             "art_20200226_4.html"
         ]
     },
+    "cpu": {
+        "folder": "cpu",
+        "files": [
+            "art_20190930.html",
+            "art_20200401.html",
+            "art_20200402.html",
+            "art_20200403.html",
+            "art_20200404.html"
+        ]
+    },
     "dessin": {
         "folder": "dessin",
         "files": [
@@ -30,10 +40,13 @@
             "art_20200226_13.html"
         ]
     },
-    "fourmis": {
-        "folder": "fourmis",
+    "jeux": {
+        "folder": "jeux",
         "files": [
-            "art_20200226.html"
+            "art_20190915.html",
+            "art_20191000.html",
+            "art_20200301.html",
+            "art_20201027.html"
         ]
     },
     "main": {
@@ -45,37 +58,7 @@
     "maths": {
         "folder": "maths",
         "files": [
-            "art_20190900.html",
-            "art_20190915.html",
-            "art_20190930.html",
-            "art_20191000.html",
-            "art_20200100.html",
-            "art_20200301.html",
-            "art_20200315.html",
-            "art_20200319.html",
-            "art_20200320_0.html",
-            "art_20200320_1.html",
-            "art_20200320_2.html",
-            "art_20200321.html",
-            "art_20200322_0.html",
-            "art_20200322_1.html",
-            "art_20200323_0.html",
-            "art_20200324_0.html",
-            "art_20200329_0.html",
-            "art_20200329_1.html",
-            "art_20200329_2.html",
-            "art_20200329_3.html",
-            "art_20200401.html",
-            "art_20200402.html",
-            "art_20200403.html",
-            "art_20200404.html",
-            "art_20200405.html",
-            "art_20200406.html",
-            "art_20200409_0.html",
-            "art_20200409_1.html",
-            "art_20200409_2.html",
-            "art_20200410.html",
-            "art_20200411.html"
+            "art_20200221.html"
         ]
     },
     "micro": {
@@ -88,41 +71,11 @@
             "art_4.html"
         ]
     },
-    "musique": {
-        "folder": "musique",
-        "files": [
-            "art_20200225.html"
-        ]
-    },
-    "simu": {
-        "folder": "simu",
+    "physique": {
+        "folder": "physique",
         "files": [
             "art_20200301.html",
             "art_20200311.html"
-        ]
-    },
-    "terminotor": {
-        "folder": "terminotor",
-        "files": [
-            "art_20200220.html",
-            "art_20200221.html",
-            "art_20200222.html",
-            "art_20200223.html",
-            "art_20200224.html",
-            "art_20200225_0.html",
-            "art_20200225_1.html",
-            "art_20200226.html",
-            "art_20200301.html",
-            "art_20200311.html",
-            "art_20200317.html"
-        ]
-    },
-    "tpe": {
-        "folder": "tpe",
-        "files": [
-            "art_0.html",
-            "art_1.html",
-            "art_2.html"
         ]
     }
 }

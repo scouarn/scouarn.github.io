@@ -1,13 +1,13 @@
 
 
-class Ship extends RogueBody {
-  constructor() {
-    super();
+class Ship extends Body {
+  constructor(mass = 1, name = "ship") {
+    super(mass,name);
     this.isThrusting = false;
     this.thrust = 0.01;
     this.autopilot = new Autopilot(this);
 
-    this.ftlTargetId;
+    this.ftlTargetId = 0;
 
     this.cargo = {
       "fuel":75
@@ -37,6 +37,11 @@ class Ship extends RogueBody {
     }
     else this.isThrusting = false;
 
+  }
+
+  ftlJump(dumSys) {
+    console.log("FTL!");
+    //currentSystem = dumSys.promote();
   }
 
 }

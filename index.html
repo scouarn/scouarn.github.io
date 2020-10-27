@@ -17,8 +17,10 @@
       default-src 'self';
       img-src 'self' *;
       media-src 'self' ;
-      script-src 'self' 'unsafe-inline';"
-      >
+      script-src 'self' 'unsafe-inline';
+      style-src 'self' 'unsafe-inline';"
+    >
+
 
   </head>
 
@@ -50,13 +52,15 @@
             <li cat="astro">Astronomie</li>
             <li cat="micro">Microscopie</li>
             <li cat="jeux">Jeux</li>
-            <li cat="musique">Musique</li>
-            <li cat="dessin">Dessin</li>
+            <li cat="cpu">Machines</li>
           </ul>
         </div>
       </aside>
 
+      <script>initMenu();</script>
+
       <section id="article_feed">
+      <script>initFeed();</script>
 
       </section>
 
@@ -68,13 +72,7 @@
 
   </body>
 
-  <script>
-      $(document).ready(()=> {
-          initMenu();initFeed();
-      });
-  </script>
 
-  <script></script>
 
 
 </html>

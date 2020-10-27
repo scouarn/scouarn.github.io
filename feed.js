@@ -27,6 +27,14 @@ function initMenu() {
     }
   };
 
+  //https://stackoverflow.com/questions/8916620/disable-arrow-key-scrolling-in-users-browser/8916697
+  window.addEventListener("keydown", (e)=> {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+    }
+  }, false);
+
 }
 
 

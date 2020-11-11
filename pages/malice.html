@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>???!</title>
+    <style>
+      body {
+      font-family: courier;
+
+    }
+    h1{
+      margin:auto;
+      padding : 10px;
+      text-align : center;
+      width:50%;
+      border:solid black;
+    }
+    p {
+      text-align:center;
+      font-size:2em;
+    }
+
+    img {
+      display: block;
+      margin:auto;
+      padding : 20px;
+    }
+  </style>
+  </head>
+
+  <body>
+    <h1>Une récompense de 20€ pour toute personne qui arrive à donner la réponse à l'une de ces questions :</h1>
+    <p id="text"></p>
+    <h1>Si c'est trop dur tu peux recharger la page et espérer trouver une question plus facile.</h1>
+    <img src="/img/singes.jpg"></img>
+  </body>
+  <script>
+    let p = document.getElementById("text")
+
+    for (i = 0; i < 50; i++) {
+      s = ""
+
+      for (j = 0; j < 50; j++) {
+        n = Math.floor(Math.random()*26);
+        if (n == 0) s += " "
+        else s+= String.fromCharCode(n+65);
+
+      }
+
+      p.innerHTML += i+1 + " - " + s + "?<br>";
+    }
+
+  </script>
+
+</html>

@@ -27,7 +27,7 @@ function initMenu() {
     }
   };
 
-  
+
 
 }
 
@@ -56,7 +56,7 @@ function showFeed(cat) {
   //load the feed
   $.getJSON( "/articles/manifest.json", (obj) =>{
     $.each(obj[cat].files,(index,file)=> {
-      $('#article_feed').append($("<article></article>").addClass("box").load('/articles/'+obj[cat].folder+'/'+file));
+      $('#article_feed').append($("<article id="+file.split(".")[0]+"></article>").addClass("box").load('/articles/'+obj[cat].folder+'/'+file));
 
     });
   });

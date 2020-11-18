@@ -54,8 +54,8 @@ function showFeed(cat) {
   $("#article_feed").empty();
 
   //window hash anchor (not working)
-  const hash0 = window.location.hash;
-  const hash1 = hash0.split("#").pop();
+  //const hash0 = window.location.hash;
+  //const hash1 = hash0.split("#").pop();
 
   //load the feed
   $.getJSON( "/articles/manifest.json", (obj) =>{
@@ -65,13 +65,9 @@ function showFeed(cat) {
 
       $('#article_feed').append($("<article id="+hash2+"></article>").addClass("box").load('/articles/'+obj[cat].folder+'/'+file));
 
-      // if (hash1 == hash2) {
-      //
-      //   $(window).on("load",()=>{window.scrollTo(0,$(hash0)[0].offsetTop); console.log($(hash0)[0].offsetTop-100);});
-      // }
-      // if (index+1 == obj[cat].files.length) {
-      //   anchor.scrollIntoView();
-      // }
+      // if (hash1 == hash2)
+      //   $(window).ready(()=>{window.scrollTo(0,$(hash0)[0].offsetTop); console.log($(hash0)[0].offsetTop);});
+
     });
 
   });

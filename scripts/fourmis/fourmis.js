@@ -7,8 +7,6 @@ function setup() {
   frameRate(20);
   initCells(100,100);
 }
-//test
-
 
 
 function draw() {

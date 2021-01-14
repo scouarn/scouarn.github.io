@@ -10,7 +10,6 @@ let cells;
 function initCells(w,h) {
   cols = w;
   rows = h;
-  let rows2 = 2;
 
   cells = zero_grid(cols,rows);
 

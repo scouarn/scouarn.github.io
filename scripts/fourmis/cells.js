@@ -5,13 +5,12 @@ function zero_grid(w,h) {
   return [...Array(w)].map(col=>Array(h).fill(false));
 }
 
-let cells;
 
 function initCells(w,h) {
   cols = w;
   rows = h;
 
-  cells = zero_grid(cols,rows);
+  let cells = zero_grid(cols,rows);
 
   for (let x = 0; x < cols; x++)
   for (let y = 0; y < rows; y++) {
@@ -22,9 +21,11 @@ function initCells(w,h) {
       cells[x][y] = random(1) < 0.2;
   }
 
+  return cells;
+
 }
 
-function updateCells() {
+function updateCells(cells) {
 
   next = zero_grid(cols,rows);
 
@@ -58,7 +59,7 @@ function updateCells() {
   cells = next;
 }
 
-function displayCells() {
+function displayCells(cells) {
 
     fill(255);
     noStroke();

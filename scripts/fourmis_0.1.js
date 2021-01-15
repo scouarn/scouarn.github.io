@@ -27,6 +27,7 @@ function setup() {
         wall : false
       };
 
+  ants = [];
   for (let i = 0; i < 75; i++)
     ants.push({
       x : rows/2,

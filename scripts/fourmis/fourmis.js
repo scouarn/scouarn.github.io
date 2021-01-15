@@ -1,5 +1,4 @@
-let pheH;
-let pheF;
+let cells;
 let ants;
 
 let rows;
@@ -17,7 +16,7 @@ function setup() {
   resX = width/cols;
   resY = height/rows;
 
-  pheH = initCells(rows,cols);
+  cells = initCells(rows,cols);
   ants = initAnts(50,rows/2,cols/2);
 }
 
@@ -25,18 +24,14 @@ function setup() {
 function draw() {
   background(0);
 
-  displayCells(pheH);
+  displayCells(cells);
 
-
-  stroke(255,0,0);
   strokeWeight(5);
   translate(resX/2, resY/2)
   for (let a of ants) {
-    point(a.x*resX, a.y*resY);
-    pheH[a.x][a.y] = 255;
-    a = a.update(a);
+    a.update(a);
   }
-  pheH = decay(pheH,0.98);
 
+  decay(cells,0.99);
 
 }

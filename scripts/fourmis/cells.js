@@ -1,5 +1,19 @@
 function zero_grid(w,h) {
-  return [...Array(w)].map(col=>Array(h).fill(0));
+
+  let grid = Array.from(Array(w), () => new Array(h));
+
+
+  for (let i = 0; i < w; i++)
+  for (let j = 0; j < w; j++)
+    grid[i][j] =
+      {
+        home : 0,
+        food : 0,
+        wall : false
+      };
+
+
+  return grid;
 }
 
 
@@ -12,17 +26,13 @@ function initCells(w,h) {
 
 function decay(cells,val) {
 
-  let cols = cells.length;
-  let rows = cells[0].length;
+  for (let rows of cells)
+  for (let cell of rows)
+    {
+      cell.home *= val;
+      cell.food *= val;
+    }
 
-  next = zero_grid(cols,rows);
-
-  for (let x = 0; x < cols; x++)
-  for (let y = 0; y < rows; y++) {
-      next[x][y] = cells[x][y] * val;
-  }
-
-  return next ;
 }
 
 function displayCells(cells) {
@@ -37,7 +47,7 @@ function displayCells(cells) {
 
     for (let x = 0; x < cols; x++)
     for (let y = 0; y < rows; y++) {
-        fill(cells[x][y]);
+        fill(cells[x][y].home);
         rect(x*resX,y*resY,resX,resY);
     }
 }

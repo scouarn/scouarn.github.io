@@ -1,5 +1,21 @@
-let cols;
-let rows;
+let cells;
+
+
+function setup() {
+
+  createCanvas(600,600);
+  frameRate(20);
+  cells = initCells(100,100);
+}
+
+
+function draw() {
+  background(0);
+  displayCells(cells);
+  cells = updateCells(cells);
+}
+
+
 
 function zero_grid(w,h) {
   return [...Array(w)].map(col=>Array(h).fill(false));
@@ -7,17 +23,11 @@ function zero_grid(w,h) {
 
 
 function initCells(w,h) {
-  cols = w;
-  rows = h;
 
-  let cells = zero_grid(cols,rows);
+  let cells = zero_grid(w,h);
 
-  for (let x = 0; x < cols; x++)
-  for (let y = 0; y < rows; y++) {
-      if (cells[x][y]) {
-        fill(255);
-        rect(x*resX,y*resY,resX,resY);
-      }
+  for (let x = 0; x < w; x++)
+  for (let y = 0; y < h; y++) {
       cells[x][y] = random(1) < 0.2;
   }
 
@@ -26,6 +36,8 @@ function initCells(w,h) {
 }
 
 function updateCells(cells) {
+  let cols = cells.length;
+  let rows = cells[0].length;
 
   next = zero_grid(cols,rows);
 
@@ -56,13 +68,15 @@ function updateCells(cells) {
 
   }
 
-  cells = next;
+  return next ;
 }
 
 function displayCells(cells) {
-
     fill(255);
     noStroke();
+
+    let cols = cells.length;
+    let rows = cells[0].length;
 
     let resX = width/cols;
     let resY = height/rows;

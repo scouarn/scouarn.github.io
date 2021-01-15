@@ -1,19 +1,56 @@
+let cells;
+let ants;
 
+let rows;
+let cols;
+let resX;
+let resY;
 
-function initAnts(pop, pX, pY) {
+function setup() {
 
-  let ants = [];
+  createCanvas(600,600);
+  frameRate(60);
 
-  for (let i = 0; i < pop; i++)
+  rows = 100;
+  cols = 100;
+  resX = width/cols;
+  resY = height/rows;
+
+  cells = zero_grid(rows,cols);
+
+  for (let i = 0; i < 75; i++)
     ants.push({
-      x : pX,
-      y : pY,
+      x : rows/2,
+      y : cols/2,
       update : explore
     });
 
-  return ants;
+}
+
+
+function draw() {
+  background(0);
+
+  noStroke();
+  for (let x = 0; x < cols; x++)
+  for (let y = 0; y < rows; y++) {
+      fill(cells[x][y].food);
+      rect(x*resX,y*resY,resX,resY);
+      cell.food *= 0.99;
+  }
+
+  strokeWeight(5);
+  stroke(255,0,0);
+  translate(resX/2, resY/2)
+  for (let a of ants) {
+    a.update(a);
+    point(a.x*resX, a.y*resY);
+  }
 
 }
+
+
+
 
 function explore(ant) {
 
@@ -81,23 +118,6 @@ function explore(ant) {
 
 }
 
-function comeBack(ant) {
-
-  //put home
-  //follow food and home
-  //if find home, explore or forage
-
-}
-
-function forage(ant) {
-
-  //maintain road
-  //follow food
-  //if find food, come back
-
-
-
-}
 
 function wander(ant, choice) {
 

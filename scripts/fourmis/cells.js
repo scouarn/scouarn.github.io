@@ -34,20 +34,3 @@ function decay(cells,val) {
     }
 
 }
-
-function displayCells(cells) {
-
-    noStroke();
-
-    let cols = cells.length;
-    let rows = cells[0].length;
-
-    let resX = width/cols;
-    let resY = height/rows;
-
-    for (let x = 0; x < cols; x++)
-    for (let y = 0; y < rows; y++) {
-        fill(cells[x][y].home);
-        rect(x*resX,y*resY,resX,resY);
-    }
-}

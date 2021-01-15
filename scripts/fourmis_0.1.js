@@ -16,7 +16,16 @@ function setup() {
   resX = width/cols;
   resY = height/rows;
 
-  cells = zero_grid(rows,cols);
+  cells = Array.from(Array(cols), () => new Array(rows));
+
+  for (let i = 0; i < w; i++)
+  for (let j = 0; j < w; j++)
+    cells[i][j] =
+      {
+        home : 0,
+        food : 0,
+        wall : false
+      };
 
   for (let i = 0; i < 75; i++)
     ants.push({

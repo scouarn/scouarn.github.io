@@ -18,8 +18,8 @@ function setup() {
 
   cells = Array.from(Array(cols), () => new Array(rows));
 
-  for (let i = 0; i < w; i++)
-  for (let j = 0; j < w; j++)
+  for (let i = 0; i < cols; i++)
+  for (let j = 0; j < rows; j++)
     cells[i][j] =
       {
         home : 0,

@@ -4,7 +4,7 @@ function zero_grid(w,h) {
 
 
   for (let i = 0; i < w; i++)
-  for (let j = 0; j < w; j++)
+  for (let j = 0; j < h; j++)
     grid[i][j] =
       {
         home : 0,

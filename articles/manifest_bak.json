@@ -1,4 +1,11 @@
 {
+    "maths": {
+        "folder": "maths",
+        "files": [
+            "art_20200221.html",
+            "art_20201118.html"
+        ]
+    },
     "astro": {
         "folder": "astro",
         "files": [
@@ -10,14 +17,12 @@
             "art_20200226_4.html"
         ]
     },
-    "cpu": {
-        "folder": "cpu",
+    "physique": {
+        "folder": "physique",
         "files": [
-            "art_20190930.html",
-            "art_20200401.html",
-            "art_20200402.html",
-            "art_20200403.html",
-            "art_20200404.html"
+            "art_20200301.html",
+            "art_20200311.html",
+            "art_20201205.html"
         ]
     },
     "dessin": {
@@ -40,6 +45,16 @@
             "art_20200226_13.html"
         ]
     },
+    "cpu_old": {
+        "folder": "cpu_old",
+        "files": [
+            "art_20190930.html",
+            "art_20200401.html",
+            "art_20200402.html",
+            "art_20200403.html",
+            "art_20200404.html"
+        ]
+    },
     "jeux": {
         "folder": "jeux",
         "files": [
@@ -55,13 +70,6 @@
             "art_0.html"
         ]
     },
-    "maths": {
-        "folder": "maths",
-        "files": [
-            "art_20200221.html",
-            "art_20201118.html"
-        ]
-    },
     "micro": {
         "folder": "micro",
         "files": [
@@ -72,12 +80,15 @@
             "art_4.html"
         ]
     },
-    "physique": {
-        "folder": "physique",
+    "cpu": {
+        "folder": "cpu",
         "files": [
-            "art_20200301.html",
-            "art_20200311.html",
-            "art_20201205.html"
+            "0.html",
+            "1.html",
+            "2.html",
+            "3.html",
+            "4.html",
+            "5.html"
         ]
     }
 }

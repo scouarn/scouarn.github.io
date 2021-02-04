@@ -49,7 +49,7 @@ function updateFeed() {
 
 
 function showFeed(cat) {
-  
+
   //remove the feed
   $("#article_feed").empty();
 
@@ -59,7 +59,7 @@ function showFeed(cat) {
 
   //load the feed
   $.getJSON("/articles/manifest.json", (obj) =>{
-  
+
     $.each(obj[cat].files,(index,file)=> {
       const hash2 = file.split(".")[0];
 

@@ -70,7 +70,9 @@ function showFeed(cat) {
 
     });
 
-  });
+  }).fail( function(d, textStatus, error) {
+        console.error("getJSON failed, status: " + textStatus + ", error: "+error);
+    });
 
 
 

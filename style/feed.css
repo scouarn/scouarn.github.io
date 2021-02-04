@@ -17,11 +17,12 @@
   font-size: 0.7em;
 }
 #article_feed article h2 {
-  margin-left:0.5em;
+  margin-left:15px;
+  font-size: 1.3em;
 }
 #article_feed article p {
   text-align: justify;
-  text-indent : 2px;
+  text-indent : 15px;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom:10px;

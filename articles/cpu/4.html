@@ -1,1 +1,41 @@
-<h1>Architecture machine</h1>
+<h1>Programmation machine</h1>
+
+
+V- PROGRAMMATION MACHINE
+	1) PRÉSENTATION
+		La logique de contrôle du processeur interprète les commandes qui lui sont envoyées.
+		Dans certains cas le programme est stocké sur une mémoire lecture seule : papier perforé par exemple.
+
+	2) LANGAGE MACHINE
+		La façon dont les instructions sont "encryptées" en binaires est conçue sur plusieurs critères :
+		facilité à décoder pour simplifier la logique de contrôle; longueur des instructions; l'architecture en elle-même.
+
+		[EXEMPLES]
+
+
+	3) LANGAGE ASSEMBLEUR
+		Pour simplifier la programmation il est commode de transcrire les nombres binaires par des codes écrits.
+		On appelle aussi "assembleur" le programme qui transcrit dans l'autre sens.
+
+
+
+		[EXEMPLE]
+
+		L'assembleur donne le contrôle total sur la machine, cepandent celà peut vite devenir compliqué :
+		les processeurs d'aujourd'hui possèdent un très très grand nombre d'instructions et devoir se référer
+		au manuel toutes les 10 secondes n'est pas pratique. De plus la notion de variable n'existe pas vraiment,
+		il faut spécifier l'adresse mémoire plutôt qu'un nom.
+
+
+
+
+	4) LANGAGES DE HAUT NIVEAU
+		Le langage assembleur reste très spécifique à chaque machine et très lourd à programmer.
+		Des langages ont été conçu pour faire abstraction de la machine pour à nouveau la rendre plus efficace, pratique et
+		lisible. Ils doivent quand même être convertis en langage machine à un moment ou à un autre.
+
+		[EXEMPLE]
+
+		L'exemple de Python est un peu particulier : en réalité il s'agit d'un programme C qui lit les fichiers script Python
+		pour les executer en temps réel. Le programme C a été converti au préhalable en langage machine :
+		le fichier .py contient du texte, le fichier .exe contient du binaire brut.

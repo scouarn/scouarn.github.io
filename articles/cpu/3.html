@@ -96,20 +96,22 @@
 	</p>
 	<img class="half center" src="/img/testarch2.svg">
 	<p>
-		Avec SP le "stack pointeur", le registre qui garde l'adresse de la pile et NULL le registre vide.
+		Avec NULL le registre vide et MEM le registre d'interface mémoire.
 	</p>
 
 	<p>
 		Ici, tous les registres sont reliés à l'UAL : dans un instruction on pourra choisir deux registres pour les termes de l'opération et un troisième pour le résultat.
-		On peut choisir le registre vide si l'on ne veut pas stocker le résultat, ou bien si on veut faire des opérations qui n'utilisent qu'un seul terme.
-		La mémoire est traitée comme un registre pour simplifier sont accès, l'adresse est toujours contrôlée par.
-		De plus ici on peut utiliser l'UAL pour incrémenter le compteur programme (et le pointeur de pile) alors que dans l'exemple précédent un circuit dédié aurait été nécessaire.
+		De plus ici on peut utiliser l'UAL pour incrémenter le compteur programme alors que dans l'exemple précédent un circuit dédié aurait été nécessaire.
 		Il est par exemple aussi possible d'effectuer directement une addition avec un registre au lieu d'incrémenter si l'on veut effectuer un saut relatif.
+		On peut choisir le registre vide si l'on ne veut pas stocker le résultat, ou bien si on veut faire des opérations qui n'utilisent qu'un seul terme.
+		La mémoire est traitée comme un registre pour simplifier sont accès, l'adresse est toujours contrôlée par ADR.
+		On a en bonus un troisième registre général (C) qui peut s'avérer pratique dans certains cas.
 	</p>
 
 	<p>
 		Cette architecture est plus "puissante" et la logique de contrôle devrait être plus simple à mettre au point si l'on fait en sorte que les instructions
-		soient de la forme "registre_0 := registre_1 {opération} registre_2". Cela n'est pas vraiment faisable sur la première architecture.
+		soient de la forme "registre_0 := registre_1 {opération} registre_2".
+		Cela n'est pas vraiment faisable avec la première architecture et pas forcément la meilleure façon de tirer le maximum de cette dernière.
 	</p>
 
 

@@ -5,7 +5,10 @@
 	<p>
 		Comme il existe de nombreux concepts de machines à vapeur, de réacteurs nucléaires ou encore de moteurs fusée,
 		il y a plein de manières de concevoir le mode opératoire d'un ordinateur.
-		Les premiers ordinateurs utilisaient une architecture "de Harvard", le programme est séparé des données et ne peut pas être modifié.
+		Les premiers ordinateurs utilisaient une architecture "de Harvard" où le programme est séparé des données et
+		ne peut pas être modifié par la machine.
+		Ce système rend certaines choses assez simples puisque le programme peut par exemple être stocké sur
+		une bande de papier perforée à la manière d'une boîte à musique.
 	</p>
 
 	<img class="half center" src="/img/harvard.svg">
@@ -13,7 +16,7 @@
 	<p>
 		Les ordinateurs modernes utilise des architectures de typee "Von Neumann", les données et le programme sont mélangés,
 		cela donne plus de libertés : il alors par exemple possible sur un même ordinateur d'écrire un programme puis de l'exécuter sans
-		avoir à physiquement extraire le programme écrit de la mémoire des données pour l'insérer dans la mémoire programme.
+		avoir à extraire physiquement le programme de la mémoire des données pour l'insérer dans la mémoire programme.
 	</p>
 
 	<img class="half center" src="/img/neumann.svg">
@@ -22,29 +25,28 @@
 		Il va maintenant falloir se demander à quoi ressemble l'intérieur du bloc "CPU".
 		L'unité de contrôle est responsable du décodage et de l'exécution des instructions en donnant des ordres au reste du système
 		alors que la partie arithmétique et logique	se charge de transformer les données (addition de deux nombres par exemple).
-		L'architecture machine s'intéresse à la manière dont ces composants communiquent et coopèrent.
+		L'architecture machine s'intéresse surtout à la manière dont ces composants communiquent et coopèrent.
 	</p>
 
 	<p>
 		On appellera "bus" les composants qui transportent les données à l'intérieur du processeur,
-		il s'agit d'un paquet de fils parallèles (un par bit de donnée). Les registres sont quand à eux
-		des composants qui permettent le stockage temporaire d'une valeur, par exemple le compteur programme
-		contient l'adresse mémoire de l'instruction à exécuter.
+		en pratique il s'agit d'un paquet de fils parallèles (un fil par bit de donnée).
+		Les registres sont quand à eux sont des composants qui permettent le stockage temporaire d'une valeur,
+		par exemple le compteur programme est un registre qui	contient l'adresse mémoire de l'instruction à exécuter.
 	</p>
 
 
 <h2>Exemple</h2>
 	<p>
+		[EXEMPLE D'ARCHITECTURE ET EXPLICATION : EXÉCUTION D'UNE INSTRUCTION]
 	</p>
-		[EXEMPLE D'ARCHITECTURE]
+
 
 <h2>Comparaison d'architectures</h2>
 	<p>
 		Voici un autre exemple d'architecture un peu plus abouti :
 
-		[EXEMPLE]
-
-		-avantages de vitesse etc...
+		[EXEMPLE -avantages de vitesse etc...]
 	</p>
 
 <h2>Le dilemne de l'octet</h2>

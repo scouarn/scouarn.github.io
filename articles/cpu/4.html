@@ -2,43 +2,47 @@
 
 <h2>Présentation</h2>
 	<p>
-		La logique de contrôle du processeur interprète les commandes qui lui sont envoyées.
-		Dans certains cas (architecture type Harvard par exemple) le programme est stocké sur une mémoire lecture seule : papier perforé par exemple.
+		La logique de contrôle du processeur interprète les commandes qui lui sont envoyées : elles sont codés en binaires
 	</p>
 
 <h2>Langage machine</h2>
 	<p>
-		La façon dont les instructions sont "encryptées" en binaires est conçue sur plusieurs critères :
-		facilité à décoder pour simplifier la logique de contrôle; longueur des instructions; l'architecture en elle-même.
+		La façon dont les instructions sont "encryptées" en binaires est choisie sur plusieurs critères :
+		facilité à décoder pour simplifier la logique de contrôle, longueur des instructions et dépend l'architecture en elle-même.
+		De manière évidente un processeur qui n'a pas de circuit pour multiplier n'aura pas d'instruction "multiplier".
 
-		[EXEMPLES]
 	</p>
+	[EXEMPLES DE SET D'INSTRUCTIONS]
+
 
 <h2>Langage assembleur</h2>
 	<p>
-		Pour simplifier la programmation il est commode de transcrire les nombres binaires par des codes écrits.
-		On appelle aussi "assembleur" le programme qui transcrit dans l'autre sens.
+		Pour simplifier la programmation il est commode de transcrire les nombres binaires par des codes alphanumériques qui symbolisent l'instruction en question.
+		Normalement le terme "assembleur" désigne le programme qui fait la transcription.
+	</p>
 
+		[EXEMPLE : BINAIRE VS ASSEMBLEUR]
 
-
-		[EXEMPLE]
-
-		L'assembleur donne le contrôle total sur la machine, cepandent celà peut vite devenir compliqué :
-		les processeurs d'aujourd'hui possèdent un très très grand nombre d'instructions et devoir se référer
-		au manuel toutes les 10 secondes n'est pas pratique. De plus la notion de variable n'existe pas vraiment,
-		il faut spécifier l'adresse mémoire plutôt qu'un nom.
+	<p>
+		L'assembleur donne le contrôle total sur la machine, cepandent cela peut vite devenir compliqué :
+		les processeurs d'aujourd'hui possèdent un grand nombre d'instructions et devoir se référer
+		au manuel toutes les 10 secondes n'est pas pratique.
+		La notion de variable est assez vague : il faut spécifier l'adresse mémoire plutôt qu'un nom.
+		De plus l'assembleur est spécifique à la machine puisque qu'il y a correspondance avec le langage machine.
 	</p>
 
 
 <h2>Langages de haut niveau</h2>
 	<p>
-		Le langage assembleur reste très spécifique à chaque machine et très lourd à programmer.
-		Des langages ont été conçu pour faire abstraction de la machine pour à nouveau la rendre plus efficace, pratique et
-		lisible. Ils doivent quand même être convertis en langage machine à un moment ou à un autre.
+		D'autres langages ont été élaborés pour faire abstraction de la machine pour à nouveau rendre la programmation plus efficace, pratique et
+		lisible. Ils doivent quand même être convertis en langage machine à un moment ou à un autre : un compilateur
+		est un programme qui converti un fichier texte (qui contient du code) en un fichier exécutable par l'ordinateur.
+	</p>
 
-		[EXEMPLE]
+		[EXEMPLE : PYTHON VS ASSEMBLEUR]
 
-		L'exemple de Python est un peu particulier : en réalité il s'agit d'un programme C qui lit les fichiers script Python
-		pour les executer en temps réel. Le programme C a été converti au préhalable en langage machine :
-		le fichier .py contient du texte, le fichier .exe contient du binaire brut.
+	<p>
+		L'exemple de Python est un peu particulier cepandent, en réalité il s'agit d'un programme qui lit les fichiers script (.py)
+		et les execute en temps réel : ici on parle plutôt d'interpréteur que de compilateur. Le code n'est pas intégralement
+		converti en langage machine avant d'être exécuté. Cela a ses avantages et inconvénients.
 	</p>

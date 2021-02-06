@@ -38,16 +38,67 @@
 
 <h2>Exemple</h2>
 	<p>
-		[EXEMPLE D'ARCHITECTURE ET EXPLICATION : EXÉCUTION D'UNE INSTRUCTION]
+		Voici une architecture purement fictive, regardons comment circuleraient les données dans le processeur :
 	</p>
+	<img class="half center" src="/img/testarch1.svg">
 
-
-<h2>Comparaison d'architectures</h2>
 	<p>
-		Voici un autre exemple d'architecture un peu plus abouti :
-
-		[EXEMPLE -avantages de vitesse etc...]
+		Avec :
+		<ul>
+			<li>UAL l'unité arithmétique et logique</li>
+			<li>PC le compteur programme</li>
+			<li>ADR le registre d'adresse mémoire</li>
+			<li>IR le registre d'instruction</li>
+			<li>DECO le décodeur d'instruction / la logique de contrôle</li>
+			<li>FL le registre des "flags" (informations sur le résultat de l'UAL)</li>
+			<li>A et B les registres généraux</li>
+		</ul>
 	</p>
+
+	<p>
+		Effectuons l'opération "Z := X + Y" avec X,Y,Z des valeurs dans la mémoire dont les adresses sont explicités avec l'instruction. <br>
+
+		<ul>
+		<li>Cycle 1 trouver l'instruction :
+		<ol>
+			<li>On envoie l'adresse de PC à la mémoire, on récupère la donnée, on la stocke dans IR</li>
+			<li>Pendant ce temps là, on incrémente le compteur programme</li>
+			<li>On décode l'instruction : il faut prendre deux nombres dans la mémoire, faire une addition, mettre le résultat dans la mémoire </li>
+		</ol></li>
+		<br>
+		<li>Cycle 2 trouver X :
+		<ol>
+			<li>On envoie l'adresse de PC à la mémoire, on récupère la donnée, on la stocke dans ADR, on a trouvé l'adresse de X !</li>
+			<li>Pendant ce temps là, on incrémente le compteur programme</li>
+			<li>On envoie l'adresse de ADR à la mémoire, on récupère la donnée, on la stocke dans A, on a trouvé X !</li>
+		</ol></li>
+		<br>
+		<li>Cycle 3 trouver Y :
+		<ol>
+			<li>On envoie l'adresse de PC à la mémoire, on récupère la donnée, on la stocke dans ADR, on a trouvé l'adresse de Y !</li>
+			<li>Pendant ce temps là, on incrémente le compteur programme</li>
+			<li>On envoie l'adresse de ADR à la mémoire, on récupère la donnée, on la stocke dans B, on a trouvé Y !</li>
+		</ol></li>
+		<br>
+		<li>Cycle 4 renvoyer Z :
+		<ol>
+			<li>On envoie l'adresse de PC à la mémoire, on récupère la donnée, on la stocke dans ADR, on a trouvé l'adresse de Z !</li>
+			<li>Pendant ce temps là, on incrémente le compteur programme</li>
+			<li>On demande à l'UAL d'effectuer l'opération "A+B" et on envoie le résultat à la mémoire, on a trouvé Z !</li>
+		</ol></li>
+
+		</ul>
+	</p>
+
+<h2>Autre exemple et comparaison</h2>
+	<p>
+		Voici un autre exemple d'architecture un peu plus élaborée :
+	</p>
+	<img class="half center" src="/img/testarch2.svg">
+	<p>
+		Avec SP le "stack pointeur", le registre qui garde l'adresse de la pile et NULL le registre vide.
+	</p>
+
 
 <h2>Le dilemne de l'octet</h2>
 	<p>
@@ -58,5 +109,5 @@
 		et non à des fins de traitement de texte.
 
 		L'idée n'étant pas de construire un système compatible avec les mémoires actuelles, on choisira le nombre de
-		bits pour coincider avec l'architecture choisie avant tout.
+		bits avant tout pour coincider avec l'architecture choisie.
 	</p>

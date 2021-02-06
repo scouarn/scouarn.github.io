@@ -8,122 +8,146 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="297mm"
-   height="210mm"
-   viewBox="0 0 297 210"
+   width="254.32562mm"
+   height="65.007629mm"
+   viewBox="0 0 254.32562 65.007629"
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2 (1.0.2+r75+1)"
    sodipodi:docname="harvard.svg">
   <defs
      id="defs2">
+    <rect
+       x="143.24399"
+       y="112.12872"
+       width="19.105255"
+       height="11.515706"
+       id="rect2727" />
+    <rect
+       x="105.58549"
+       y="95.112801"
+       width="33.309952"
+       height="26.692734"
+       id="rect2721" />
+    <rect
+       x="150.17252"
+       y="95.112801"
+       width="70.993248"
+       height="48.050926"
+       id="rect2682" />
+    <rect
+       x="154.64282"
+       y="103.07327"
+       width="38.627129"
+       height="24.403929"
+       id="rect2624" />
     <marker
        style="overflow:visible"
        id="Club"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Club"
        inkscape:isstock="true">
       <path
          transform="scale(0.6)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:0.74587913pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M -1.5971367,-7.0977635 C -3.4863874,-7.0977635 -5.0235187,-5.5606321 -5.0235187,-3.6713813 C -5.0235187,-3.0147015 -4.7851656,-2.4444556 -4.4641095,-1.9232271 C -4.5028609,-1.8911157 -4.5437814,-1.8647646 -4.5806531,-1.8299921 C -5.2030765,-2.6849849 -6.1700514,-3.2751330 -7.3077730,-3.2751330 C -9.1970245,-3.2751331 -10.734155,-1.7380016 -10.734155,0.15124914 C -10.734155,2.0404999 -9.1970245,3.5776313 -7.3077730,3.5776313 C -6.3143268,3.5776313 -5.4391540,3.1355702 -4.8137404,2.4588126 C -4.9384274,2.8137041 -5.0235187,3.1803000 -5.0235187,3.5776313 C -5.0235187,5.4668819 -3.4863874,7.0040135 -1.5971367,7.0040135 C 0.29211394,7.0040135 1.8292454,5.4668819 1.8292454,3.5776313 C 1.8292454,2.7842354 1.5136868,2.0838028 1.0600576,1.5031550 C 2.4152718,1.7663868 3.7718375,2.2973711 4.7661444,3.8340272 C 4.0279463,3.0958289 3.5540908,1.7534117 3.5540908,-0.058529361 L 2.9247554,-0.10514681 L 3.5074733,-0.12845553 C 3.5074733,-1.9403966 3.9580199,-3.2828138 4.6962183,-4.0210121 C 3.7371277,-2.5387813 2.4390549,-1.9946496 1.1299838,-1.7134486 C 1.5341802,-2.2753578 1.8292454,-2.9268556 1.8292454,-3.6713813 C 1.8292454,-5.5606319 0.29211394,-7.0977635 -1.5971367,-7.0977635 z "
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.745879pt;stroke-opacity:1"
+         d="m -1.5971367,-7.0977635 c -1.8892507,0 -3.426382,1.5371314 -3.426382,3.4263822 0,0.6566798 0.2383531,1.2269257 0.5594092,1.7481542 -0.038751,0.032111 -0.079672,0.058463 -0.1165436,0.093235 -0.6224234,-0.8549928 -1.5893983,-1.4451409 -2.7271199,-1.4451409 -1.8892515,-1e-7 -3.426382,1.5371314 -3.426382,3.42638214 0,1.88925076 1.5371305,3.42638216 3.426382,3.42638216 0.9934462,0 1.868619,-0.4420611 2.4940326,-1.1188187 -0.124687,0.3548915 -0.2097783,0.7214874 -0.2097783,1.1188187 0,1.8892506 1.5371313,3.4263822 3.426382,3.4263822 1.88925064,0 3.4263821,-1.5371316 3.4263821,-3.4263822 0,-0.7933959 -0.3155586,-1.4938285 -0.7691878,-2.0744763 C 2.4152718,1.7663868 3.7718375,2.2973711 4.7661444,3.8340272 4.0279463,3.0958289 3.5540908,1.7534117 3.5540908,-0.05852936 l -0.6293354,-0.04661745 0.5827179,-0.0233087 c 0,-1.81194109 0.4505466,-3.15435829 1.188745,-3.89255659 -0.9590906,1.4822308 -2.2571634,2.0263625 -3.5662345,2.3075635 0.4041964,-0.5619092 0.6992616,-1.213407 0.6992616,-1.9579327 0,-1.8892506 -1.53713146,-3.4263822 -3.4263821,-3.4263822 z"
          id="path1192" />
     </marker>
     <marker
        style="overflow:visible"
        id="marker2439"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="TriangleOutL"
        inkscape:isstock="true">
       <path
          transform="scale(0.8)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
          id="path2437" />
     </marker>
     <marker
-       style="overflow:visible;"
+       style="overflow:visible"
        id="Arrow2Mend"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow2Mend"
        inkscape:isstock="true">
       <path
-         transform="scale(0.6) rotate(180) translate(0,0)"
-         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
-         style="fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round;stroke:#000000;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(-0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
          id="path990" />
     </marker>
     <marker
        style="overflow:visible"
        id="Arrow1Mstart"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Mstart"
        inkscape:isstock="true">
       <path
-         transform="scale(0.4) translate(10,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         transform="matrix(0.4,0,0,0.4,4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path969" />
     </marker>
     <marker
        style="overflow:visible"
        id="TriangleOutL"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="TriangleOutL"
        inkscape:isstock="true">
       <path
          transform="scale(0.8)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 5.77,0 -2.88,5 V -5 Z"
          id="path1105" />
     </marker>
     <marker
        style="overflow:visible"
        id="Arrow1Lstart"
-       refX="0.0"
-       refY="0.0"
+       refX="0"
+       refY="0"
        orient="auto"
        inkscape:stockid="Arrow1Lstart"
        inkscape:isstock="true">
       <path
-         transform="scale(0.8) translate(12.5,0)"
-         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
-         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         transform="matrix(0.8,0,0,0.8,10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
          id="path963" />
     </marker>
     <rect
-       x="30.600085"
+       x="30.600084"
        y="95.219826"
-       width="71.055775"
-       height="37.017694"
+       width="71.055779"
+       height="37.017693"
        id="rect2061" />
     <rect
        x="101.15572"
-       y="64.563358"
-       width="94.994363"
-       height="19.270995"
+       y="64.563354"
+       width="94.994362"
+       height="19.270994"
        id="rect1995" />
     <rect
        x="113.22734"
        y="128.55685"
-       width="39.844818"
-       height="41.80373"
+       width="39.465256"
+       height="24.374041"
        id="rect1339" />
     <rect
        x="61.416908"
        y="128.2002"
-       width="28.388273"
-       height="16.020805"
+       width="37.345375"
+       height="27.091602"
        id="rect1325" />
     <rect
        x="109.08326"
@@ -213,11 +237,11 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.35"
-     inkscape:cx="730.63069"
-     inkscape:cy="98.361195"
+     inkscape:zoom="0.73976289"
+     inkscape:cx="433.90931"
+     inkscape:cy="288.96505"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -232,15 +256,21 @@
      inkscape:window-x="72"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:snap-bbox-edge-midpoints="true"
-     inkscape:bbox-paths="true"
-     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:bbox-paths="false"
+     inkscape:bbox-nodes="false"
      inkscape:connector-spacing="3"
      inkscape:snap-midpoints="true"
      inkscape:snap-object-midpoints="true"
      inkscape:snap-center="true"
      inkscape:snap-text-baseline="true"
-     inkscape:snap-page="true" />
+     inkscape:snap-page="true"
+     inkscape:pagecheckerboard="true"
+     showborder="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -256,7 +286,29 @@
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(-20.635337,-74.992373)">
+    <rect
+       style="fill:#0080ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.27067;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10-2-5"
+       width="63"
+       height="63.729332"
+       x="21.270672"
+       y="75.635338" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:9.87778px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;white-space:pre;inline-size:62.0706;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="52.770672"
+       y="107.5"
+       id="text2067-6"
+       transform="translate(-0.18650207,-3.2507925)"><tspan
+         x="52.770672"
+         y="107.5"><tspan
+           style="font-size:9.87778px;text-align:center;text-anchor:middle;stroke-width:0.264583">Mémoire</tspan><tspan></tspan><tspan
+           y="107.5"> </tspan></tspan><tspan
+         x="52.770672"
+         y="119.84723"><tspan
+           style="font-size:9.87778px;text-align:center;text-anchor:middle;stroke-width:0.264583">programme</tspan></tspan></text>
     <rect
        style="fill:#0080ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.27067;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect10"
@@ -287,33 +339,17 @@
     <text
        xml:space="preserve"
        id="text1323"
-       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect1325);fill:#000000;fill-opacity:1;stroke:none"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect1325);fill:#000000;fill-opacity:1;stroke:none;"
        x="13.082922"
        y="0"
-       transform="matrix(0.98698935,0,0,0.97998346,50.689484,-17.871268)"><tspan
-         x="62.215821"
-         y="133.81748"><tspan
-           style="font-size:6.35px;text-align:center;text-anchor:middle">Unité de
-</tspan></tspan><tspan
-         x="62.180164"
-         y="141.75498"><tspan
-           style="font-size:6.35px;text-align:center;text-anchor:middle">Contrôle</tspan></tspan></text>
+       transform="matrix(0.98698935,0,0,0.97998346,47.587742,-17.871264)" />
     <text
        xml:space="preserve"
        id="text1337"
-       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect1339);fill:#000000;fill-opacity:1;stroke:none;"
-       transform="matrix(0.98698935,0,0,0.97998346,38.327954,-21.442534)"
-       x="18.106031"
-       y="0"><tspan
-         x="125.66805"
-         y="133.55065"><tspan
-           style="text-align:center;text-anchor:middle">Unité </tspan></tspan><tspan
-         x="114.88767"
-         y="140.6062"><tspan
-           style="text-align:center;text-anchor:middle">arithmétique </tspan></tspan><tspan
-         x="119.00662"
-         y="147.66176"><tspan
-           style="text-align:center;text-anchor:middle">et logique</tspan></tspan></text>
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect1339);fill:#000000;fill-opacity:1;stroke:none;"
+       transform="matrix(0.98698935,0,0,0.97998346,38.682234,-16.164958)"
+       x="36.212059"
+       y="0" />
     <text
        xml:space="preserve"
        id="text1993"
@@ -328,41 +364,20 @@
        height="63.729332"
        x="211.32562"
        y="75.627708" />
-    <rect
-       style="fill:#0080ff;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.27067;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       id="rect10-2-7"
-       width="63"
-       height="63.729332"
-       x="20.635336"
-       y="75.635338" />
-    <text
-       xml:space="preserve"
-       id="text2059"
-       style="font-style:normal;font-weight:normal;font-size:9.87778px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2061);fill:#000000;fill-opacity:1;stroke:none;"
-       transform="translate(-14.214458,0.28898568)"
-       x="29.936062"
-       y="0"><tspan
-         x="44.662568"
-         y="103.96022"><tspan
-           style="font-size:9.87778px;text-align:center;text-anchor:middle">Mémoire
-</tspan></tspan><tspan
-         x="37.439924"
-         y="116.30745"><tspan
-           style="font-size:9.87778px;text-align:center;text-anchor:middle">Programme</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:9.87778px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="242.58791"
-       y="105.03517"
+       x="242.82562"
+       y="107.49237"
        id="text2067"><tspan
          sodipodi:role="line"
          id="tspan2065"
-         x="242.58791"
-         y="105.03517"
+         x="242.82562"
+         y="107.49237"
          style="font-size:9.87778px;text-align:center;text-anchor:middle;stroke-width:0.264583">Mémoire de</tspan><tspan
          sodipodi:role="line"
-         x="242.58791"
-         y="117.38239"
+         x="242.82562"
+         y="119.83959"
          style="font-size:9.87778px;text-align:center;text-anchor:middle;stroke-width:0.264583"
          id="tspan2069">travail</tspan></text>
     <path
@@ -383,5 +398,55 @@
        id="path2091-8-5"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       id="text2622"
+       style="font-style:normal;font-weight:normal;font-size:6.35px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect2624);fill:#000000;fill-opacity:1;stroke:none;"
+       x="18.5291"
+       y="0"
+       transform="translate(-4.0499539,-0.03855432)" />
+    <text
+       xml:space="preserve"
+       id="text2680"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;text-align:center;white-space:pre;shape-inside:url(#rect2682);fill:#000000;fill-opacity:1;stroke:none;"
+       x="18.5291"
+       y="0"
+       transform="translate(-1.581416,9.2198044)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.4796;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="169.91229"
+       y="114.71247"
+       id="text2067-1"
+       transform="translate(-44.832127,-1.3105147)"><tspan
+         x="169.91229"
+         y="114.71247"><tspan
+           style="font-size:5.64444px;text-align:center;text-anchor:middle;stroke-width:0.264583">Unité de</tspan><tspan></tspan><tspan
+           y="114.71247"> </tspan></tspan><tspan
+         x="169.91229"
+         y="121.76802"><tspan
+           style="font-size:5.64444px;text-align:center;text-anchor:middle;stroke-width:0.264583">contrôle</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       id="text2725"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect2727);fill:#000000;fill-opacity:1;stroke:none;" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:5.64444px;line-height:1.25;font-family:sans-serif;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.4796;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="169.91229"
+       y="114.71247"
+       id="text2067-1-0"
+       transform="translate(-0.16930894,-5.3853741)"><tspan
+         x="169.91229"
+         y="114.71247"><tspan
+           style="font-size:5.64444px;text-align:center;text-anchor:middle;stroke-width:0.264583">Unité</tspan><tspan></tspan><tspan
+           y="114.71247"> </tspan></tspan><tspan
+         x="169.91229"
+         y="121.76802"><tspan
+           style="font-size:5.64444px;text-align:center;text-anchor:middle;stroke-width:0.264583">arithmétique</tspan><tspan></tspan><tspan
+           y="121.76802"> </tspan></tspan><tspan
+         x="169.91229"
+         y="128.82357"><tspan
+           style="font-size:5.64444px;text-align:center;text-anchor:middle;stroke-width:0.264583">et logique</tspan></tspan></text>
   </g>
 </svg>

@@ -10,10 +10,23 @@
 		La façon dont les instructions sont "encryptées" en binaires est choisie sur plusieurs critères :
 		facilité à décoder pour simplifier la logique de contrôle, longueur des instructions et dépend l'architecture en elle-même.
 		De manière évidente un processeur qui n'a pas de circuit pour multiplier n'aura pas d'instruction "multiplier".
-
 	</p>
-	[EXEMPLES DE SET D'INSTRUCTIONS]
 
+	<p>
+		Reprenons la seconde architecture de la partie précédente. On conçoit des opérations de la forme "registre_0 := registre_1 {fonction} registre_2".
+		Il y a 8 registres, il faut donc 3 bits pour encoder/identifier un registre. Admettons que l'UAL est capable de 16 fonctions différentes : 4 bits suffisent pour les encoder.
+		On peut représenter les instructions avec 16 bits de cette manière :
+	</p>
+
+
+	<img class="three-fourths center" src="/img/testarch2ins.svg">
+
+	<p>
+		Avec OP l'opération, DST le registre de destination, SRC les registres sources, FL un bit pour ne pas enregistrer de nouveaux flags et COND pour préciser une condition
+		(l'instruction sera annulée si la condition n'est pas remplie : "le flag zéro vaut 1" par exemple).
+		Supposons aussi que certaines fonctions de l'UAL prennent directement la valeur SRC2 en entrée au lieu de la valeur du registre SRC2.
+		Cela permet de faire des calculs directement avec des valeurs précisées dans l'instruction.
+	</p>
 
 <h2>Langage assembleur</h2>
 	<p>
@@ -21,7 +34,36 @@
 		Normalement le terme "assembleur" désigne le programme qui fait la transcription.
 	</p>
 
-		[EXEMPLE : BINAIRE VS ASSEMBLEUR]
+
+		<textarea style="resize: none;" class="center" rows="13" cols="80" readonly>
+;Fibonacci Binaire
+
+	1100 001 000 001 0 00
+	1100 010 000 000 0 00
+
+
+	0100 011 001 000 0 00
+	0000 001 001 010 0 00
+	0100 010 011 000 0 00
+
+	1001 111 111 100 0 00
+
+		</textarea>
+		<br>
+		<textarea style="resize: none;" class="center" rows="13" cols="80" readonly>
+;Fibonacci Assembleur
+
+	MOV A 1 	;mettre 0 dans A
+	MOV B 0		;mettre 0 dans B
+
+boucle :
+	MOV C A   	;mettre A dans C
+	ADD A A B 	;mettre A+B dans A
+	MOV B C   	;mettre C dans A
+
+	SUB PC PC 4  	;sauter de -4 i.e revenir dans la boucle
+		</textarea>
+
 
 	<p>
 		L'assembleur donne le contrôle total sur la machine, cepandent cela peut vite devenir compliqué :
@@ -39,7 +81,19 @@
 		est un programme qui converti un fichier texte (qui contient du code) en un fichier exécutable par l'ordinateur.
 	</p>
 
-		[EXEMPLE : PYTHON VS ASSEMBLEUR]
+	<textarea style="resize: none;" class="center" rows="12" cols="80" readonly>
+#Fibonacci Python
+
+a = 1
+b = 0
+
+while (True) : #pas de condition d'arrêt
+	c = a
+	a = a + b
+	b = c
+
+
+	</textarea>
 
 	<p>
 		L'exemple de Python est un peu particulier cepandent, en réalité il s'agit d'un programme qui lit les fichiers script (.py)

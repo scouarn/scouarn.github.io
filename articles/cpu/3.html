@@ -110,17 +110,22 @@
 
 	<p>
 		Cette architecture est plus "puissante" et la logique de contrôle devrait être plus simple à mettre au point si l'on fait en sorte que les instructions
-		soient de la forme "registre_0 := registre_1 {opération} registre_2".
+		soient de la forme "registre_0 := registre_1 {fonction} registre_2".
 		Cela n'est pas vraiment faisable avec la première architecture et pas forcément la meilleure façon de tirer le maximum de cette dernière.
 	</p>
 
 
 
-<h2>Logique de contrôle standardisée</h2>
+<h2>Logique de contrôle polyvalente</h2>
 	<p>
-		[EXEMPLE : µPC + µCODE]
-	</p>
+		Pour simplifier conception du circuit de contrôle, on peut recourir au concepte de microcode :
+		on utilise une petite mémoire (µMEM) qui contient les opérations à effectuer pour exécuter chaque instruction.
+		À chaque nouvelle instruction le microcompteur (µPC) est remis à zéro, puis à chaque étape il est incrémenté.
+		En combinant le registre d'instruction et le µPC on génère l'adresse mémoire des opérations qu'il faut effectuer à cette étape de l'instruction.
+		Les opérations / les signaux de contrôle sont directement reliés aux composants du processeur.
 
+	</p>
+		<img class="third center" src="/img/micromemlogic.svg">
 
 
 <h2>Le dilemne de l'octet</h2>

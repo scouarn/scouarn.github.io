@@ -2,7 +2,7 @@ const SIZE = 300;
 const V0 = 5;
 const R0 = 20;
 const B0 = 0.05;
-const DT = 0.0001;
+const DT = 0.00005;
 let Tl = 500;
 let EPCS = 500;
 

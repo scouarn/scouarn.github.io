@@ -1,25 +1,35 @@
 const SIZE = 300;
 const V0 = 5;
-const R0 = 1000;
-const B0 = 0.5;
+const R0 = 20;
+const B0 = 0.05;
 const DT = 0.0001;
-const Tl = 100;
-const EPCS = 500;
+let Tl = 500;
+let EPCS = 500;
 
 
 let p;
 
+let speedSlider;
+let traceSlider;
 
 function setup() {
   createCanvas(600,600,WEBGL);
+  //
+  // speedSlider = createSlider(0, 1000, EPCS);
+  // speedSlider.position(10, 10);
+  // speedSlider.style('width', '150px');
+  //
+  // traceSlider = createSlider(0, 2000, Tl);
+  // traceSlider.position(10, 30);
+  // traceSlider.style('width', '150px');
 
 
   p = {
     "trace" : [],
-    "q" : 0.001,
+    "q" : -0.02,
     "m" : 0.0001,
-    "pos" : createVector(0, 0, 0),
-    "vel" : createVector(0, 0, -10),
+    "pos" : createVector(0, 100, 0),
+    "vel" : createVector(100, 0, 100),
   }
 
 
@@ -53,7 +63,7 @@ function show(p) {
     vertex(i.x, i.y, i.z);
   endShape();
 
-  strokeWeight(3);
+  strokeWeight(5);
   stroke(0,255,0);
   point(p.pos);
 
@@ -75,11 +85,10 @@ function update(p) {
 
 
   //apply E force
-  const Fe = createVector(-p.pos.x*p.pos.x, -p.pos.y*p.pos.y, 2*p.pos.z*p.pos.z);
-
+  const Fe = createVector(-p.pos.x, -p.pos.y, 2*p.pos.z);
   p.vel.add(Fe.mult(p.q*DT*V0/(p.m*R0*R0)));
 
-
+  //update pos
   p.pos.add(p5.Vector.mult(p.vel, DT));
 
 }

@@ -5,28 +5,16 @@
     <title>test</title>
     <link rel='stylesheet' href='/style/p5frame-doc.css'/>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.min.js"></script>
-    <script>
-      //https://stackoverflow.com/questions/8916620/disable-arrow-key-scrolling-in-users-browser/8916697
-      window.addEventListener("keydown", (e)=> {
-        // space and arrow keys
-        if([32, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
-            e.preventDefault();
-        }
-      }, false);
-    </script>
+    <script src="/scripts/p5.min.js"></script>
 
   </head>
-
-
 
   <body>
     <script id="canvas"></script>
     <img id="exitButton" src="/img/exitButton.png" onclick="window.location.href='p5-idle-frame.html?'+script;">
 
     <script>
-      let script = window.location.href.split("?")[1];
+      const script = window.location.href.split("?")[1];
       document.getElementById("canvas").setAttribute("src",script);
     </script>
 
